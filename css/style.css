@@ -1,0 +1,703 @@
+@charset "utf-8";
+
+/* ===================================================================
+CSS information
+
+ file name  :style.css
+ author     :Clearcode Publishing (admin)
+ style info :コンテンツエリア関係 他
+ 
+このスタイルシートの構成
+ 基本設定、レイアウト、横幅設定など
+ 汎用class
+ #page
+  #contents
+   #main
+    #header
+    #sub
+    #footer
+   　各ページ...html
+=================================================================== */
+
+
+/*----------------------------------------------------
+	基本設定、リンクカラーなど
+----------------------------------------------------*/
+body,html {
+		height: 100%;/*高さを１００％に*/
+}
+
+a:link {
+		color: #;
+		text-decoration: none;
+}
+
+a:visited {
+		color: #;
+		text-decoration: none;
+}
+
+a:hover {
+		text-decoration: none;
+}
+
+a.push:active {
+        position: relative;/*--ポチっとボタン風に--*/
+		top: 1px;/*--ポチっとボタン風に--*/
+}
+
+
+/*----------------------------------------------------
+	共通ページ
+----------------------------------------------------*/
+#emboss { 
+
+}
+
+h2 {
+	border-bottom:#dbdbdb 1px solid;
+	padding-bottom:7px;
+	margin-bottom: 8px;
+}
+
+h2:first-child {
+
+}
+
+h3 {
+	 color:#fb7e04;
+}
+
+/*----------------------------------------------------
+	汎用 class
+----------------------------------------------------*/
+.imgR {
+		float: right;
+        display: inline;
+		margin: 0 0 10px 10px;
+}
+
+.imgL {
+		float: left;
+        display: inline;
+		margin: 0px 15px 0 0;
+}
+
+.FL-box {/*FLOATしたボックスの回り込み解除(要)*/
+	_zoom: 1;
+	overflow:hidden;
+}
+
+.FL-box p,
+.FL-box div {/*FLOATしたボックスの回り込み解除(要)*/
+	overflow:hidden;	
+	_zoom: 1;
+}
+
+.section {
+	margin: 25px 0 33px 0;
+}
+
+.sec-dec dt {
+	color:#fb7e04;
+	margin-bottom:3px;
+}
+
+.sec-dec dd {
+	font-size:12px;
+	margin-bottom:14px;
+}
+
+.normal-List {
+	margin-top:5px;
+	text-indent:0.3em;
+}
+
+.normal-List li {
+	list-style: disc inside;
+}
+
+.txtC {/*--センタリング--*/
+		text-align: center;
+}
+
+.up {
+		margin-top: 0.8em;
+}
+
+.up2 {
+		margin-top: 2em;
+}
+
+.indent {/*--インデント--*/
+		text-indent: 1em;
+}
+
+.-indent {/*--逆インデント--*/
+		text-indent: -1em;
+		padding-left: 1em;
+}
+
+.bold {
+	font-weight:bold;
+}
+
+.redTxt {
+	color:red;
+}
+
+.blue-txt {
+	color:#05296a;
+}
+
+.orangeTxt {
+		color: #fb7e04;
+}
+
+.greenTxt {
+		color: #87be0e;
+}
+
+.clear {
+	clear:both;
+}
+
+ins{
+  text-decoration:none;
+}
+
+
+a:hover .opacity {/*--透過処理--*/
+		filter:alpha(opacity=70);  /* IE7以下用 */
+		-ms-filter: "alpha(opacity=70)"; /* IE8用 */
+		-moz-opacity:0.7; /* Firefox 1.5未満, Netscape用 */
+		-khtml-opacity: 0.7;  /* Safari 1.x, 他khtmlに対応したブラウザ用  */
+		opacity: 0.7; /* Firefox 1.5以上, Opera, Safari用 */
+    } 
+
+a.zoom:hover {/*--マウスオーバーをズームアイコン--*/
+		cursor: url(zoomin.cur), pointer;
+}
+
+
+#hogehoge a:visited:after { /*訪問後のリンクにチェック*/ 
+    content:"　\2713"; 
+} 
+
+
+/*******************************************/
+/* 外部リンクは別窓用の指定 */
+.externalIcon {
+		padding-left: 5px;
+		vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix:after { 
+		visibility: hidden;  
+		display: block;  
+		font-size: 0;  
+		content: " ";  
+		clear: both;  
+		height: 0;  
+} 
+
+/* IE6 */ 
+* html .clearfix { 
+		zoom: 1;
+	} 
+	
+/* IE7 */	
+*:first-child+html .clearfix { 
+		zoom: 1; 
+	} 
+
+/*----------------------------------------------------
+	#page
+----------------------------------------------------*/
+body > #page {
+	height: auto;
+}
+
+#S-D {
+	height:20px;
+	width:954px;
+	margin:0 auto;
+	text-align:center;
+}
+
+#S-D  ul {
+	padding-left:20px;
+}
+
+#S-D  ul li {
+	float:left;
+	margin: 0 3px 0 3px;
+}
+
+*html #S-D ul li {
+	display: inline;
+}
+
+#S-D ul li strong {
+}
+
+#S-D ul li:after {
+	content: " |";
+}
+	
+#S-D ul li.ft-1:before {
+	content: "| ";
+}
+
+
+#S-D li.sk-1:before {
+	content: "| ";
+}
+
+
+#page {
+	width: 954px;
+	margin: 0 auto;
+	text-align: left;
+	background-color: #ffffff;
+	border-top: #fb7e04 8px solid;
+	height: 100% ;
+	min-height: 100%;
+}
+
+/* -----------------------------------------------------------
+	#header
+		ヘッダー
+----------------------------------------------------------- */
+#header {
+	position:relative;
+	zoom:1;
+}
+
+h1 {
+	height: 69px;
+	width: 286px;
+	margin:20px 0 0 69px;
+}
+
+#hd-adress {
+	width: 225px;
+	font-size:11px;
+	line-height:1.4;
+	position: absolute;
+	left: 678px;
+	top:33px;
+}
+
+
+
+#hd-adress p {
+	margin-bottom: 5px;
+}
+
+#nav {
+	width:100%;
+	background-color:#fb7e04;
+	margin-top:35px;
+}
+
+#nav ul {
+        line-height: normal;/*--IE7対策--*/
+		zoom:1;
+		padding: 15px 0 15px 0;
+		width:900px;
+		margin-left:69px;
+}
+
+#nav ul li {
+	float:left;
+	display:inline;
+	margin-right: 75px;
+}
+
+#nav ul li#nav-exam {
+	margin-right: 40px;
+}
+
+#nav ul li a:hover {
+	background-color: transparent;/*--IE6対策--*/
+}
+
+/*----------------------------------------------------
+	#contents
+----------------------------------------------------*/
+#contents {
+		padding:0 10px 100px 60px;/*フッターの高さ150px*/
+		margin-top: 18px;
+}
+
+#contents .pageTop {/*ページトップへ戻る（※前ページへ戻る）*/
+	clear: both;
+	text-align: right;
+}
+
+/*----------------------------------------------------
+	#main
+		メイン
+----------------------------------------------------*/
+#main {
+		width: 625px;
+		margin-right: 50px;
+		float: left;
+		display: inline;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+}
+
+
+/* -----------------------------------------------------------
+	#aside
+		サイドバー、サブ
+----------------------------------------------------------- */
+#aside {
+        float: left;
+        display: inline;
+		text-align:center;
+		margin-top:42px;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		box-sizing: border-box;
+}
+
+.sideBanner a:hover img {
+	margin: -2px;
+	border: solid 2px orange;
+}
+
+* html .sideBanner a:hover {
+	zoom: 1;
+}
+* html .sideBanner a:hover img {
+	/* for BackCompat mode
+		margin-left: -6px;
+		margin-right: -6px;
+	over here */
+	position: relative;
+}
+
+/* -----------------------------------------------------------
+	#footer
+		フッター
+----------------------------------------------------------- */
+#footer { /* フッター下部固定 */
+	position: relative;
+	margin-top: -100px; /* フッターの高さ */
+	padding-top:40px;
+	padding-bottom: 15px;
+	height: 150px;
+	clear: both;
+	font-size:10px;
+	line-height: 1.4;
+	background-color: #e1dfe0;
+	text-align:center;
+}
+
+#foot-logo {
+	margin-bottom: 15px;
+}
+
+#footer ul {
+		color: #fb7e04;
+		font-weight:bold;
+		width: 355px;
+		margin:10px auto 0 auto;
+}
+
+*:first-child+html ul {
+        line-height: normal;/*--IE7対策--*/
+}
+
+#footer ul li {
+	float:left;
+	display: inline;
+	padding: 0 4px 0 4px;
+	border-right: 1px solid #fb7e04;
+}
+
+#footer ul li:first-child {
+	border-left: 1px solid #fb7e04;
+}
+/*
+===== 1: index.html =====
+*/
+#top #main {
+	padding-bottom:50px;
+}
+
+.newicon {
+	color:#F00;
+	margin-left:5px;
+	font-size:11px;
+}
+
+#recent-list {
+	width: 600px;
+	height: 100px;
+	overflow: auto;
+}
+
+#recent-list p {
+	margin-bottom: 5px;
+}
+
+
+#recent-list p span a:link {
+	color:#040c80;
+}
+
+.sec-dec {
+	overflow:hidden;
+}
+
+#face {
+	margin-bottom:5px;
+}
+
+.m-L-i {
+	margin-left:1em;
+}
+
+#name-matsumoto {
+	margin-left:333px;
+	line-height:0.5;
+}
+
+.prof-ct {
+	margin-top:30px;
+}
+
+#history {
+	margin-right: 22px;
+}
+
+#phil-motto {
+	margin-top:18px;
+}
+
+#staff ul {
+	margin-top:-20px;
+	margin-left: 20px;
+	line-height:1.8;/*IE対策*/
+}
+
+#staff ul li {
+	list-style-type: disc;
+	position:relative;
+	_zoom:1;
+}
+
+.staff-number {
+	position:absolute;
+	top:0;
+	left: 100px;
+}
+/*
+===== 2: recruit.html =====
+*/
+
+#inner-caption {
+	font-size: 120%;
+	line-height: 2em;
+}
+
+#breadcrumbs {
+	margin-top:20px;
+}
+
+#breadcrumbs a:link {
+	color: #666666;
+	text-decoration: underline;
+}
+
+#breadcrumbs a:visited {
+
+}
+
+#breadcrumbs a:hover {
+	text-decoration: none;
+}
+
+
+.rec-t {
+    margin: 26px 0 40px 0px;
+	line-height: 1.6em;
+	border: 1px #e4e3e4 solid;
+}
+
+.rec-t caption {
+	font-size:15px;
+	margin-bottom:8px;
+}
+
+.rec-t tr {
+	border: 1px #e4e3e4 solid;
+}
+
+.rec-t th {
+    color:white;
+	text-align:center;
+	font-weight: bold;
+	background:orange;
+}
+
+.rec-t th,
+.rec-t td{
+    padding:17px;
+    font-size:15px;
+}
+
+.rec-t td {
+	padding-left: 37px;
+	line-height: 1.8em;
+}
+
+.even{
+    background:#F8F8F8;
+}
+
+/*
+===== 3:     .html =====
+*/
+
+
+
+
+/*
+===== 4: top.html=====
+*/
+
+
+/*
+===== 5: examination.html=====
+*/
+#examination h2 {
+	margin-bottom:14px;
+}
+
+.subject li {
+	list-style-type: square inside;
+	margin: 0 0 8px 0;
+}
+
+#examine .FL-box {
+	margin-bottom:15px;
+}
+/*
+===== 6: equipment.html=====
+*/
+#equip-List li {
+	padding: 20px 0 30px 0;
+	border-bottom: 1px dotted #dbdbdb;
+}
+
+
+/*
+===== 7: access.html=====
+*/
+#access .section,
+#examination .section
+{
+	margin-top:50px;
+}
+
+#access .section:first-child,
+#examination .section:first-child {
+	margin-top:30px;
+}
+
+
+.mapImg {
+	margin-top: 36px;
+}
+
+#canvas {
+	margin-top:50px;
+	width:432px;
+	height:360px;
+}
+
+/*
+===== 8: link.html=====
+*/
+#link h3 a {
+	color:#fb7e04;
+}
+	
+.link-thumb a:hover img {
+	margin: -1px;
+	border: solid 1px #9af;
+}
+
+* html .link-thumb a:hover {
+	zoom: 1;
+}
+* html .link-thumb a:hover img {
+	/* for BackCompat mode
+		margin-left: -6px;
+		margin-right: -6px;
+	over here */
+	position: relative;
+}
+
+/*
+===== 9: info.html=====
+*/
+#info #main {
+	padding-bottom:60px;
+}
+
+#info h2 {
+	margin-top:32px;
+	padding-bottom:25px;
+	border-bottom: #666 1px dotted;
+	width:590px;
+}
+
+#info .new-title {
+	color:#fb7e04;
+	font-size:14px;
+	font-weight:bold;
+	padding-bottom:10px;
+}
+
+#info dl {
+	width:590px;
+}
+
+#info dt {
+	margin-top: 24px;
+	
+}
+
+#info dd {
+	padding-bottom: 30px;
+	border-bottom: #666 1px dotted;
+	line-height:1.92;
+}
+
+#info dd p {
+	margin-bottom:6px;
+}
+
+
+/*
+* { outline: 2px dotted red }
+* * { outline: 2px dotted green }
+* * * { outline: 2px dotted orange }
+* * * * { outline: 2px dotted blue }
+* * * * * { outline: 1px solid red }
+* * * * * * { outline: 1px solid green }
+* * * * * * * { outline: 1px solid orange }
+* * * * * * * * { outline: 1px solid blue }
+*/
+
+

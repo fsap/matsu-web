@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+ file name  :  default.css
+ style info :  リセット及びbody初期設定 (このスタイルシートは基本的に変更しない)
+=================================================================== */
+
+/*---------- reset ----------*/
+html {
+		overflow-y: scroll;
+}
+
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,div,p,pre,code,form,fieldset,legend,input,textarea,blockquote,table,th,td {/*「p」と「div」は必要に応じて挿入*/
+		margin: 0;
+		padding: 0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+		font-style: normal;
+        font-weight: normal;
+}
+
+sup {
+        vertical-align: text-top;
+}
+sub {
+        vertical-align: text-bottom;
+}
+
+input,textarea,select {
+        font-family: inherit;
+		font-size: inherit;
+		font-weight:inherit;
+}
+
+* html input,
+* html textarea,
+* html select {
+        font-size: 100%;
+}
+
+*:first-child+html+input, 
+*:first-child html+textarea, 
+*:first-child+html select {
+        font-size: 100%;
+}
+
+table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		font-size: inherit;
+}
+
+th,td {
+        text-align: left;
+        vertical-align: top;
+}
+
+caption {
+        text-align: left;
+}
+
+q:before,q:after {
+		content: '';
+}
+
+img,object,embed {
+		vertical-align: top;
+}
+
+hr,legend {
+		display: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+        clear: both; 
+	    font-size: 100%;
+        font-weight: normal;
+}
+
+img,abbr,acronym,fieldset { 
+        border: 0;
+}
+
+ul,dl,ol { 
+        text-indent: 0;
+}
+
+li {
+        list-style-type: none;
+}
+
+a {
+        outline: 0;
+}
+
+pre,code,kbd,samp,tt {
+        font-family: monospace;
+}
+
+* html pre, 
+* html code, 
+* html kbd, 
+* html samp, 
+* html tt {
+        font-size: 100%; 
+        line-height: 100%;
+}
+
+*:first-child+html pre,
+*:first-child html+code,
+*:first-child html+kbd,
+*:first-child+html+samp,
+*:first-child+html tt {
+        font-size: 108%; 
+        line-height: 100%;
+}
+
+input,select,textarea {
+        font-size: 100%; 
+        font-family: Verdana, Helvetica, sans-serif;
+}
+
+
+/*---------- default ----------*/
+html,body {
+		background: #F4F4F4;
+		color: #666666;
+}
+
+body {
+        text-align: center;
+/*        font: 13px/1 "メイリオ","Meiryo","ＭＳ Ｐゴシック","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3",sans-serif; */
+        font: 13px/1 "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO", "メイリオ","Meiryo", sans-serif;
+		line-height: 1.73;
+}
+
+* html body {
+        font-size: small;
+}
+
+*:first-child+html body {
+        font-size: small;
+        font-family: "ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+}
+	
+
+
