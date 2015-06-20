@@ -1,0 +1,26 @@
+# Basic
+AuthUserFile /home/fujiwara/matsu-web/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Secret Area"
+AuthType Basic
+
+require valid-user
+
+<Files ~ "^.(htpasswd|htaccess)$">
+    deny from all
+</Files>
+
+
+# SP redirect
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !/sp/
+RewriteCond %{HTTP_USER_AGENT} (iPod|iPhone|iPad|Android|Windows\ Phone)
+RewriteRule ^(.*)$ sp/$1 [R]
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} /sp/
+RewriteCond %{HTTP_USER_AGENT} !(iPod|iPhone|iPad|Android|Windows\ Phone)
+RewriteRule ^sp/(.*)$ $1 [R]
+RewriteBase /
+
