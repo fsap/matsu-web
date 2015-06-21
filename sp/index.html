@@ -1,17 +1,48 @@
-<html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<title>
-まつもと整形外科クリニック&nbsp;|&nbsp;福岡市東区&nbsp;|&nbsp;和白&nbsp;|&nbsp;スポーツ整形&nbsp;|&nbsp;骨粗鬆症&nbsp;|&nbsp;リウマチ</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>
+    まつもと整形外科クリニック&nbsp;|&nbsp;福岡市東区&nbsp;|&nbsp;和白&nbsp;|&nbsp;スポーツ整形&nbsp;|&nbsp;骨粗鬆症&nbsp;|&nbsp;リウマチ
+  </title>
 
-<meta name="keywords" content="キーワード" />
-<meta name="description" content="紹介文" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/style.css">
+  <meta name="keywords" content="福岡市東区,和白,整形外科,一般整形外科,スポーツ整形外科,リウマチ科,骨粗鬆症,メタボリックシンドローム,巻爪手術,物理療法,五十肩" />
+  <meta name="description" content="まつもと整形外科クリニックは整形外科専門医＝痛みをなくすプロフェッショナルとして、病気を治すだけではない、病気になりにくい体づくり、患者様の健康増進に取り組んでいきます。" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+  <script type="text/javascript">google.load("jquery", "1.4");</script>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/style.css">
+
+<script type="text/javascript">
+  google.load('maps', '3.0', { other_params: 'sensor=false' });
+  google.setOnLoadCallback(function() {
+    $(function() {
+      var latlng = new google.maps.LatLng(33.691022,130.431747);
+      var options = {
+        zoom: 15,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        streetviewControl : true
+      };
+      var map = new google.maps.Map($('#map_canvas')[0], options);
+      var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        title: 'まつもと整形外科クリニック'
+      });
+      var content = '<a href="#">まつもと整形外科クリニック</a>' +
+                    '<br />福岡市東区和白丘２丁目３－７<br />092-605-6006';
+      var infowindow = new google.maps.InfoWindow({
+        content: content ,
+        size: new google.maps.Size(50, 50)
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map, marker);
+      });
+    });
+  });
+</script>
 </head>
-
 <body>
 
 <header>
@@ -20,7 +51,7 @@
   <h1>まつもと整形外科クリニック | 福岡市東区 | 和白 | スポーツ整形</h1>
   <div class="info_area">
     <div class="logo">
-      <img src="img/common/header-logo.gif" alt="top_logo">
+      <img src="img/common/header-logo.png" alt="top_logo">
 	</div>
 	 <div class="info">
 <!--
@@ -67,17 +98,6 @@
 	</p>
   </div>
   <div class="face_right">
-    <h3>院長略歴</h3>
-    昭和４９年福岡県生まれ<br />
-    平成１１年福岡大学医学部卒業<br />
-    九州大学整形外科学教室入局<br />
-    <ul class="list_profile">
-      <li>九州大学病院　整形外科</li>
-      <li>浜の町病院　整形外科</li>
-      <li>九州中央病院　整形外科</li>
-      <li>タケシマ整形外科医院　副院長</li>
-      <li>福岡和白病院　整形外科　など</li>
-    </ul>
     <h3>資格</h3>
     <ul class="list_profile">
       <li>日本整形外科学会専門医</li>
@@ -85,56 +105,44 @@
       <li>日本整形外科学会認定リウマチ医</li>
       <li>日本整形外科学会認定運動器リハビリテーション医</li>
     </ul>
-    <h3>所属学会</h3>
-    <ul class="list_profile">
-      <li>日本整形外科学会</li>
-      <li>西日本整形外科災害外科学会</li>
-      <li>日本骨粗鬆症学会</li>
-      <li>日本整形外科スポーツ医学会</li>
-      <li>日本臨床スポーツ医学会</li>
-      <li>日本医師会</li>
-    </ul>
   </div>
   <div class="all_clear" />
 </section>
 
 <section>
-  <h2>まつもと整形外科クリニックからのごあいさつ</h2>
+  <h2>クリニック理念</h2>
   <p class="content_left">
-    当院は２０１０年１０月に開院した整形外科のクリニックです。<br />
+    <strong class="strong_font">患者様＝大切な家族、友人の精神</strong><br />
+	〜この精神でスタッフ一同患者様と向き合います〜<br />
+	<strong class="middle_font">積極的な予防医学、健康増進</strong><br />
+	〜充実した理学療法士やスポーツトレーナーによる運動指導〜<br />
     <br />
-    <strong class="strong_font">ー皆様が笑顔で元気な楽しいクリニックへー</strong><br />
-	・「患者様＝大切な家族、友人」の精神でスタッフ一同患者様と向き合います。<br />
-	・病は気から！病気にならない体づくりのために、予防医学・健康増進に努めます。<br />
-	・できるだけ患者様にとって痛みや負担の少ない治療を提供いたします。<br />
-    <br /><br />
-	「歳だから・・・」「そのうち治るだろう」そのような患者様の原因を追求していき、痛みをとるプロとしてスタッフ一同最大限努力してまいります。<br />
-よろしくお願い致します。
   </p>
 </section>
 
 <section>
-  <h2>当院の取り組み・特色</h2>
-  <ul class="content_left">
-    <li>スポーツトレーナーによる地域での健康教室の開催</li>
-    <li>理学療法士の専門的な治療の充実</li>
-    <li>野球肩、野球肘に対する投球動作分析</li>
-    <li>スポーツ障害に対する積極的な治療</li>
-    <li>骨粗しょう症に対する専門的な治療</li>
-  </ul>
+  <h2>診療案内</h2>
+  <p class="content_left">診療時間のご案内<br />
+    <img src="img/examination/examination_timeTable.jpg" width="450" height="225" alt="診療時間" />
+  </p>
+  <br />
 </section>
 
 <section>
-  <h2>スタッフ紹介</h2>
-  <ul class="content_left">
-    <li>看護師 　　　　５名</li>
-    <li>医療事務　　　 ４名</li>
-    <li>看護助手　　 　３名</li>
-    <li>リハビリ助手　 ４名</li>
-    <li>放射線技師　 　１名</li>
-  </ul>
+  <h2>アクセス</h2>
+  <p class="content_left">
+    まつもと整形外科クリニックは、旧３号線和白交差点からすぐの場所にございます。<br />
+	目印となる「亀の井ホテル」の隣にございます。<br />
+	無料駐車場を完備しておりますのでお車はもちろん、公共機関でも大変お越しいただきやすい場所です。<br />
+  </p>
+  <div class="content_center">
+    <img src="img/access/access_map.gif" width="422" height="367" alt="アクセス" /><br /><br />
+  </div>
+  <div id="map_canvas" class="content_center"></div>
+  <br />
 </section>
 
+<nav>
 <nav>
   <ul>
     <li><a href="staff.html">スタッフ紹介ページはこちらから</a></li>
@@ -171,7 +179,7 @@
 <footer>
   <p><a href="#">サイトマップ</a> ｜ <a href="#">リンク</a></p>
   <p>
-    <img src="img/common/footer-logo.gif" alt="footer_logo">
+    <img src="img/common/footer-logo.png" alt="footer_logo">
   </p>
   <address>
     まつもと整形外科クリニック<br />
