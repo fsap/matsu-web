@@ -113,7 +113,7 @@ section {
 section h2 {
   margin: 0 0 8px 0;
   padding: 5px 0 2px 14px;
-  font-size: 14px;
+  font-size: 16px;
   color: #999900;
   border-bottom: solid 1px;
   border-bottom-color: #cccccc;
@@ -137,7 +137,7 @@ section .face_left {
 }
 
 section .face_right {
-  font-size: 9px;
+  font-size: 12px;
   padding: 0 5px;
   margin-bottom: 5px;
   float: left;
@@ -145,6 +145,10 @@ section .face_right {
 
 section p.content_left {
   padding: 0 6px 0 12px;
+}
+
+section .content_center {
+  text-align: center;
 }
 
 section ul.content_left {
@@ -157,14 +161,20 @@ section ul.list_profile {
 
 section .face_right h3 {
   margin: 5px;
-  font-size: 13px;
+  font-size: 14px;
   color: #fb7e04;
 }
 
 section .strong_font {
-  font-size: 15px;
+  font-family: "Times New Roman", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "MS PMincho" serif;
+  font-size: 22px;
   font-weight: bold;
   color: #ff0000;
+}
+
+section .middle_font {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 section .gray_bg {
@@ -242,6 +252,10 @@ section td.table_line {
   padding : 8px 10px 8px 10px;
 }
 
+#map_canvas {
+  width: 450px;
+  height: 400px;
+}
 
 /*---------- ナビ ----------*/
 
@@ -295,7 +309,7 @@ nav li a:hover {
   text-decoration: none;
   border-bottom: solid 2px;
   border-bottom-color: #cccccc;
-  background: url(img/nav_bg_hover.gif) repeat-x;
+/*  background: url(img/nav_bg_hover.gif) repeat-x; */
 }
 
 nav dd {
