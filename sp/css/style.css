@@ -253,8 +253,8 @@ section td.table_line {
 }
 
 #map_canvas {
-  width: 450px;
-  height: 400px;
+  width: 320px;
+  height: 288px;
 }
 
 /*---------- ナビ ----------*/
