@@ -43,7 +43,7 @@ a:hover {
 
 a.push:active {
         position: relative;/*--ポチっとボタン風に--*/
-		top: 1px;/*--ポチっとボタン風に--*/
+ 		top: 1px;/*--ポチっとボタン風に--*/
 }
 
 
@@ -168,11 +168,11 @@ ins{
 
 
 a:hover .opacity {/*--透過処理--*/
-		filter:alpha(opacity=70);  /* IE7以下用 */
-		-ms-filter: "alpha(opacity=70)"; /* IE8用 */
-		-moz-opacity:0.7; /* Firefox 1.5未満, Netscape用 */
-		-khtml-opacity: 0.7;  /* Safari 1.x, 他khtmlに対応したブラウザ用  */
-		opacity: 0.7; /* Firefox 1.5以上, Opera, Safari用 */
+    	filter:alpha(opacity=70);  /* IE7以下用 */
+    	-ms-filter: "alpha(opacity=70)"; /* IE8用 */
+    	-moz-opacity:0.7; /* Firefox 1.5未満, Netscape用 */
+    	-khtml-opacity: 0.7;  /* Safari 1.x, 他khtmlに対応したブラウザ用  */
+    	opacity: 0.7; /* Firefox 1.5以上, Opera, Safari用 */
     } 
 
 a.zoom:hover {/*--マウスオーバーをズームアイコン--*/
@@ -194,12 +194,12 @@ a.zoom:hover {/*--マウスオーバーをズームアイコン--*/
 
 /* clearfix */
 .clearfix:after { 
-		visibility: hidden;  
-		display: block;  
-		font-size: 0;  
-		content: " ";  
-		clear: both;  
-		height: 0;  
+    	visibility: hidden;  
+    	display: block;  
+    	font-size: 0;  
+    	content: " ";  
+    	clear: both;  
+    	height: 0;  
 } 
 
 /* IE6 */ 
@@ -207,7 +207,7 @@ a.zoom:hover {/*--マウスオーバーをズームアイコン--*/
 		zoom: 1;
 	} 
 	
-/* IE7 */	
+/* IE7 */ 	
 *:first-child+html .clearfix { 
 		zoom: 1; 
 	} 
@@ -263,7 +263,7 @@ body > #page {
 	background-color: #ffffff;
 	border-top: #fb7e04 8px solid;
 	height: 100% ;
-	min-height: 100%;
+ 	min-height: 100%;
 }
 
 /* -----------------------------------------------------------
@@ -406,7 +406,7 @@ h1 {
 }
 
 #footer ul {
-		color: #fb7e04;
+	 	color: #fb7e04;
 		font-weight:bold;
 		width: 355px;
 		margin:10px auto 0 auto;
@@ -699,5 +699,3 @@ h1 {
 * * * * * * * { outline: 1px solid orange }
 * * * * * * * * { outline: 1px solid blue }
 */
-
-

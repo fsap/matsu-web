@@ -32,7 +32,7 @@ html,body { _zoom:0.85;}
 /* 色の指定 */
 blockquote {
 		background-color: #aaa;
-		margin: 1mm 3mm;
+    	margin: 1mm 3mm;
 		padding: 2mm;
 		border: 3px double #000;
 
@@ -41,13 +41,13 @@ blockquote {
 /* フォントの指定 */
 h1,h2,h3,h4,h5,h6 {
 		font-family: "ＭＳ Ｐゴシック", "ヒラギノ角ゴPro W3", Osaka, sansserif;
-		font-weight: bold;
+    	font-weight: bold;
 }
 
 p {
 		font-family: "ＭＳ Ｐ明朝", 細明朝体, "Ryumin Light-KL", "ヒラギノ明朝Pro W3", serif;
-		margin: 12pt 0;
-		line-height: 1.5;
+    	margin: 12pt 0;
+    	line-height: 1.5;
 
 
 }
@@ -81,6 +81,4 @@ a[href^="http://"]:after {
 }
 
 */
-
-
 
