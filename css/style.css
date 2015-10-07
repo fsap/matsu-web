@@ -101,6 +101,7 @@ h3 {
 .sec-dec dt {
 	color:#fb7e04;
 	margin-bottom:3px;
+	font-weight: bold;
 }
 
 .sec-dec dd {
@@ -426,6 +427,15 @@ h1 {
 #footer ul li:first-child {
 	border-left: 1px solid #fb7e04;
 }
+/*
+===== 0: common =====
+*/
+.subtitle {
+	font-size: 140%;
+	font-weight: bold;
+	color: #999900;
+}
+
 /*
 ===== 1: index.html =====
 */
