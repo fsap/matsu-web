@@ -37,11 +37,6 @@
 
 <script  type="text/javascript" src="js/jScrollPane-1.2.3.min.js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-<script type="text/javascript">
-$(function(){
-	$('#recent-list').jScrollPane({showArrows:true, scrollbarWidth: 15, arrowSize: 16});
-});
-</script>
 <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -53,266 +48,269 @@ $(function(){
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+<script type="text/javascript"> 
+google.load('maps', '3.0', { other_params: 'sensor=false' });
+google.setOnLoadCallback(function() {
+$(function() {
+var latlng = new google.maps.LatLng(33.691022,130.431747); 
+var options = {
+  zoom: 15,
+  center: latlng,
+  mapTypeId: google.maps.MapTypeId.ROADMAP,
+  streetviewControl : true
+};
+var map = new google.maps.Map($('#canvas')[0], options);
+var marker = new google.maps.Marker({
+  position: latlng,
+  map: map, 
+  title: 'まつもと整形外科クリニック'
+});
+var content = '<a href="#">まつもと整形外科クリニック</a>' + 
+              '<br />福岡市東区和白丘２丁目３－７<br />092-605-6006';
+var infowindow = new google.maps.InfoWindow({
+  content: content ,
+  size: new google.maps.Size(50, 50)
+});
+google.maps.event.addListener(marker, 'click', function() {
+  infowindow.open(map, marker);
+});
+
+});
+});
+</script> 
 </head>
+
 <body id="top" class="topBody">
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=135025009970062";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=135025009970062";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
-<noscript>
-<p>このページはJavaScriptを使用しています。</p>
-</noscript>
+  <noscript>
+  <p>このページはJavaScriptを使用しています。</p>
+  </noscript>
 
-<!-- ▼ #S-D -->
-<div id="S-D">
-<ul>
-	<li><strong>福岡市東区</strong></li>
-	<li><strong>和白</strong></li>
-	<li><strong>整形外科</strong></li>
-	<li><strong>一般整形外科</strong></li>
-	<li><strong>スポーツ整形外科</strong></li>
-	<li><strong>リウマチ科</strong></li>
-	<li><strong>骨粗鬆症</strong></li>
-	<li><strong>メタボリックシンドローム</strong></li>
-	<li><strong>巻爪手術</strong></li>
-	<li><strong>物理療法</strong></li>
-	<li><strong>五十肩</strong></li>
-</ul>
-</div>
-<!-- ▲ #S-D -->
+  <!-- ▼ #S-D -->
+  <div id="S-D">
+  <ul>
+    <li><strong>福岡市東区</strong></li>
+    <li><strong>和白</strong></li>
+    <li><strong>整形外科</strong></li>
+    <li><strong>一般整形外科</strong></li>
+    <li><strong>スポーツ整形外科</strong></li>
+    <li><strong>リウマチ科</strong></li>
+    <li><strong>骨粗鬆症</strong></li>
+    <li><strong>メタボリックシンドローム</strong></li>
+    <li><strong>巻爪手術</strong></li>
+    <li><strong>物理療法</strong></li>
+    <li><strong>五十肩</strong></li>
+  </ul>
+  </div>
+  <!-- ▲ #S-D -->
 
-<!-- ▼ #page -->
-<div id="page">  
+  <!-- ▼ #page -->
+  <div id="page">  
 
-		<!-- ▼ #header -->
-		<div id="header">
-		<h1><a href="index.html"><img src="img/common/header-logo.gif" width="286" height="69" alt="まつもと整形外科クリニック" /></a></h1>
+    <!-- ▼ #header -->
+    <div id="header">
+      <h1><a href="index.html"><img src="img/common/header-logo.gif" width="286" height="69" alt="まつもと整形外科クリニック" /></a></h1>
+    
+      <!-- #hd-address -->
+      <div id="hd-address">
+        <p>〒811-0213&nbsp;福岡市東区和白丘2-3-7<br />
+        TEL&nbsp;092-605-6006&nbsp;/&nbsp;FAX&nbsp;092-605-6007</p>
+        <img src="img/common/phone-number.jpg" alt="TEL:092-605-6007" width="257" height="26" />
+      </div>
+      <!-- / #hd-address -->
+
+      <div id="nav">
+        <ul class="clearfix">
+          <li><a href="index.html"><img src="img/common/menu-top.gif" width="88" height="30" alt="トップ" class="opacity" /></a></li>
+          <li id="nav-exam"><a href="examination.html"><img src="img/common/menu-examination.gif" width="141" height="30" alt="診療案内" class="opacity" /></a></li>
+          <li id="nav-equip"><a href="equipment.html"><img src="img/common/menu-equipment.gif" width="94" height="30" alt="医療設備" class="opacity" /></a></li>
+          <li><a href="access.html"><img src="img/common/menu-access.gif" width="91" height="30" alt="アクセス" class="opacity" /></a></li>
+          <li><a href="link.html"><img src="img/common/menu-link.gif" width="81" height="30" alt="リンク" class="opacity" /></a></li>
+        </ul> 
+      </div>
+      <div id="emboss">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="954" height="273" id="FlashID" title="flash">
+          <param name="movie" value="flash/top_btn.swf" />
+          <param name="quality" value="high" />
+          <param name="wmode" value="opaque" />
+          <param name="swfversion" value="6.0.65.0" />
+          <!-- このパラメータタグにより、Flash Player 6.0 または 6.5 以降を使用して、Flash Player の最新バージョンをダウンロードするようメッセージが表示されます。ユーザにメッセージを表示させないようにする場合はパラメータタグを削除します。 -->
+          <param name="expressinstall" value="Scripts/expressInstall.swf" />
+          <!-- 次のオブジェクトタグは IE 以外のブラウザで使用するためのものです。IE では IECC を使用して非表示にします。 -->
+          <!--[if !IE]>-->
+          <object type="application/x-shockwave-flash" data="flash/top_btn.swf" width="954" height="273">
+          <!--<![endif]-->
+            <param name="quality" value="high" />
+            <param name="wmode" value="opaque" />
+            <param name="swfversion" value="6.0.65.0" />
+            <param name="expressinstall" value="Scripts/expressInstall.swf" />
+            <!-- ブラウザには、Flash Player 6.0 以前のバージョンを使用して次の代替コンテンツが表示されます。 -->
+            <div>
+              <h4>このページのコンテンツには、Adobe Flash Player の最新バージョンが必要です。</h4>
+              <p>
+                <a href="http://www.adobe.com/go/getflashplayer">
+                <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Adobe Flash Player を取得" width="112" height="33" />
+                </a>
+              </p>
+            </div>
+          <!--[if !IE]>-->
+          </object>
+          <!--<![endif]-->
+        </object>
+      </div>
+    </div>
+    <!-- ▲ #header -->
+
+    <!-- ▼ #contents -->
+    <div id="contents" class="clearfix">
+    <!-- ▼ #main -->
+    <div id="main">
 		
-		<!-- #hd-address -->
-	<div id="hd-adress">
-	<p>〒811-0213&nbsp;福岡市東区和白丘2-3-7<br />
-	TEL&nbsp;092-605-6006&nbsp;/&nbsp;FAX&nbsp;092-605-6007</p><img src="img/common/phone-number.jpg" alt="TEL:092-605-6007" width="257" height="26" /></div>
-		<!-- / #hd-address -->
-		
-		<div id="nav">
-			<ul class="clearfix">
-				<li><a href="index.html"><img src="img/common/menu-top.gif" width="88" height="30" alt="トップ" class="opacity" /></a></li>
-				<li id="nav-exam"><a href="examination.html"><img src="img/common/menu-examination.gif" width="141" height="30" alt="診療案内" class="opacity" /></a></li>
-				<li id="nav-equip"><a href="equipment.html"><img src="img/common/menu-equipment.gif" width="94" height="30" alt="医療設備" class="opacity" /></a></li>
-				<li><a href="access.html"><img src="img/common/menu-access.gif" width="91" height="30" alt="アクセス" class="opacity" /></a></li>
-				<li><a href="link.html"><img src="img/common/menu-link.gif" width="81" height="30" alt="リンク" class="opacity" /></a></li>
-				
-				
-			</ul> 
-	</div>
-		<div id="emboss">
-			
-		  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="954" height="273" id="FlashID" title="flash">
-			  <param name="movie" value="flash/top_btn.swf" />
-			  <param name="quality" value="high" />
-			  <param name="wmode" value="opaque" />
-			  <param name="swfversion" value="6.0.65.0" />
-			  <!-- このパラメータタグにより、Flash Player 6.0 または 6.5 以降を使用して、Flash Player の最新バージョンをダウンロードするようメッセージが表示されます。ユーザにメッセージを表示させないようにする場合はパラメータタグを削除します。 -->
-			  <param name="expressinstall" value="Scripts/expressInstall.swf" />
-			  <!-- 次のオブジェクトタグは IE 以外のブラウザで使用するためのものです。IE では IECC を使用して非表示にします。 -->
-			  <!--[if !IE]>-->
-			  <object type="application/x-shockwave-flash" data="flash/top_btn.swf" width="954" height="273">
-				  <!--<![endif]-->
-				  <param name="quality" value="high" />
-				  <param name="wmode" value="opaque" />
-				  <param name="swfversion" value="6.0.65.0" />
-				  <param name="expressinstall" value="Scripts/expressInstall.swf" />
-				  <!-- ブラウザには、Flash Player 6.0 以前のバージョンを使用して次の代替コンテンツが表示されます。 -->
-				  <div>
-					  <h4>このページのコンテンツには、Adobe Flash Player の最新バージョンが必要です。</h4>
-					  <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Adobe Flash Player を取得" width="112" height="33" /></a></p>
-				  </div>
-				  <!--[if !IE]>-->
-			  </object>
-			  <!--<![endif]-->
-		  </object>
-		</div>
-		</div>
-		<!-- ▲ #header -->
-
-	<!-- ▼ #contents -->
-	<div id="contents" class="clearfix">
-	 
-	<!-- ▼ #main -->
-	<div id="main">
-		
-		<!-- ▼ .section -->
-		<div class="section" id="info-box">
-			<h2 class="subtitle">まつもと整形外科クリニックからのお知らせ</h2>
-
-			<!-- ▼ .osX -->
-			<div class="osX">
-				<!--  #recent-list -->
-				<div id="recent-list">
-            <p><a href="info2.html" class="opacity" style="color:#040c80;">2014.12.9　年末・年始休診日のお知らせ<br />
-            </a><a href="info2.html" class="opacity" style="color:#040c80;">2014.7.17　お盆休診日のお知らせ</a><a href="zasshi.html" class="opacity" style="color:#040c80;"><br />
-            2014.4.24　医療雑誌に紹介されました（１部内容を紹介）</a><a href="info2.html" class="opacity" style="color:#040c80;"><br />
-            2014.4.23　GW休診日のお知らせ<br />
-            2013.12.20　年末・年始休診日のお知らせ<br />
-            2013.11.20　病院増築のため工事を行っており、ご迷惑をおかけしております。<br />
-            </a><a href="recruit.html" class="opacity" style="color:#040c80;">2013.9.5　 放射線技師・看護師・看護助手・医療事務募集のお知らせ</a><br />
-            <span class="redTxt"></span></p>
-            <p><a href="info.html" class="opacity" style="color:#040c80;">2013.7.26 　 お盆休診日のお知らせ</a><span class="redTxt"></span></p>
-            <span class="redTxt"></span>
-            <p><a href="info.html#121217" class="opacity" style="color:#040c80;">2012.12.17&nbsp;&nbsp;&nbsp;&nbsp;年末年始休診日のお知らせ </a><span class="redTxt"></span></p>
-          <p><a href="info.html#120822" class="opacity" style="color:#040c80;">2012.08.22&nbsp;&nbsp;&nbsp;&nbsp;9月の休診日のお知らせ </a><span class="redTxt"></span></p>
-		  <p><a href="info.html#120801" class="opacity" style="color:#040c80;">2012.08.01&nbsp;&nbsp;&nbsp;&nbsp;お盆休診日のお知らせ</a><span class="redTxt"></span></p>
-		  <p><a href="info.html#120425" class="opacity" style="color:#040c80;">2012.04.25&nbsp;&nbsp;&nbsp;&nbsp;GW休診日のお知らせ</a><span class="redTxt"></span></p>
-		  <p><a href="info.html#1201" class="opacity" style="color:#040c80;">2011.12.01&nbsp;&nbsp;&nbsp;&nbsp;年末年始休診日のお知らせ <br />
-          </a><span class="redTxt"></span></p>
-		  <p><a href="info.html#0427" class="opacity" style="color:#040c80;">2011.10.17&nbsp;&nbsp;&nbsp;&nbsp;11月から診療時間が変わります。<br />
-		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;詳しい内容はこちらをご覧ください。 </a><span class="redTxt"></span></p>
-		  <p><a href="info.html#0427" class="opacity" style="color:#040c80;">2011.09.26&nbsp;&nbsp;&nbsp;&nbsp;Off Time10月号で当クリニックが紹介されました！<br />
-		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;詳しい内容はこちらをご覧ください。＊Off Time 10月号 </a><span class="redTxt"></span></p>
-		  <p><a href="info.html#0427" class="opacity" style="color:#040c80;">2011.08.23&nbsp;&nbsp;&nbsp;&nbsp;８／２７&nbsp;&nbsp;院長学会出席のため、休診とさせて頂きます。</a><span class="redTxt"></span></p>
-		  <p><a href="info.html#0427" class="opacity" style="color:#040c80;">2011.07.23&nbsp;&nbsp;&nbsp;&nbsp;８月の休みのお知らせ</a><span class="redTxt"></span></p>
-		  <p><a href="recruit.html" class="opacity" style="color:#040c80;">2011.06.01&nbsp;&nbsp;&nbsp;&nbsp;リハビリ助手募集のお知らせ</a><span class="redTxt"></span></p>
-		  <p><a href="info.html#0427" class="opacity" style="color:#040c80;">2011.04.27&nbsp;&nbsp;&nbsp;&nbsp;GW休診日のお知らせ</a></p>
-		  <p><a href="recruit.html" class="opacity" style="color:#040c80;">2011.02.07&nbsp;&nbsp;&nbsp;&nbsp;理学療法士（PT）・医療事務募集のお知らせ</a><span class="redTxt">(2/18募集終了いたしました)</span></p>
-		  <p><a href="info.html#0204" class="opacity" style="color:#040c80;">2011.02.04&nbsp;&nbsp;&nbsp;&nbsp;３月１２日(土)&nbsp;診療時間変更のお知らせ</a><span class="redTxt">New!</span></p>
-		  <p><a href="info.html#0121" class="opacity" style="color:#040c80;">2011.01.21&nbsp;&nbsp;&nbsp;&nbsp;「転倒予防と骨粗しょう症について」公開講座開催</a></p>
-		  <p><a href="info.html#0104" class="opacity" style="color:#040c80;">2011.01.04&nbsp;&nbsp;&nbsp;&nbsp;新年のごあいさつ</a></p>
-		  <p><a href="info.html#1130" class="opacity" style="color:#040c80;">2010.11.30&nbsp;&nbsp;&nbsp;&nbsp;年末年始休診日のお知らせ</a></p>
-		  <p><a href="info.html#1001" class="opacity" style="color:#040c80;">2010.10.01&nbsp;&nbsp;&nbsp;&nbsp;福岡市東区和白丘に開院いたしました。</a></p>
-		  <p style="visibility:hidden;">※※空白※※</p>
-			</div>
-			<!-- / #recent-list -->
-		</div>
-		<!-- ▲ .osX -->
-	</div>
-	<!-- ▲ .section -->
-
-	<!-- ▼ .section -->
-	<div class="section">
-		<h2 class="subtitle">院長紹介</h2>
-		<div class="sec-ct clearfix">
-			<p class="imgL txtC">
-				<img src="img/top/top_face.jpg" width="184" height="166" id="face" /><br />
-				<img src="img/top/top_faceFhoto-txtImg.gif" width="162" height="36" alt="院長：松本大成" />
-			</p>
-			<div class="sec-dec" align="left">
-				<dl class="clear">
-					<dt>資格</dt>
-					<dd class="m-L-i">
-						<ul class="normal-List">
-							<li>日本<b><strong>整形外科</strong></b>学会専門医</li>
-							<li>日本<b><strong>整形外科</strong></b>学会認定スポーツ医</li>
-							<li>日本<b><strong>整形外科</strong></b>学会認定リウマチ医</li>
-							<li>日本<b><strong>整形外科</strong></b>学会認定運動器リハビリテーション医</li>
-						</ul>
-					</dd>
-				</dl>
-			</div>
-		</div>
-	</div>
-	<!-- ▲ .section -->
-
-	<!-- ▼ .section -->
-	<div class="section">
-		<h2 class="subtitle">クリニック理念</h2>
-		<div id="phil-large">
-			<p>患者様＝大切な家族、友人の精神</p>
-		</div>
-		<div id="phil-normal">
-			〜この精神でスタッフ一同患者様と向き合います〜<br /><br />
-		</div>
-		<div id="phil-middle">
-			<p>積極的な予防医学、健康増進</p>
-		</div>
-		<div id="phil-normal">
-			～充実した理学療法士やスポーツトレーナーによる運動指導～
-		</div>
-		<p class="up2"><br />
-		</p>
-	</div>
-	<!-- ▲ .section -->
-
-	<!-- ▼ .section -->
-	<div class="section">
-		<h2 class="subtitle">診療案内</h2>
-		<div class="exam-normal">診療時間のご案内</div>
-		<div class="sec-ct"><img src="img/examination/examination_timeTable.jpg"/></div>
-	</div>
-	<!-- ▲ .section -->
-						
-		      <!-- ▼ .section -->
-		      <div class="section">
-			<h2><font size="+1" color="#999900"><b>スタッフ紹介</b></font></h2>
-				<div id="staff">
-          　<font size="+1"> <b><br />
-          </b></font>
-          <ul>
-            <li><font size="+1"><b>看護師&#160;　　　　５名<span class="staff-number"></span></b></font></li>
-            <!--
-					　-->
-					<li><font size="+1"><b>医療事務　　　 ４名&#160;<span class="staff-number"></span></b></font></li><!--
-					　-->
-            <li><font size="+1"><b>理学療法士　　 ８名&#160;<span class="staff-number"></span></b></font></li>
-            <li><font size="+1"><b>看護助手　　 　３名<span class="staff-number"></span></b></font></li>
-            <!--
-					　-->
-            <li><font size="+1"><b>リハビリ助手　 ４名&#160;<span class="staff-number"></span></b></font></li>
-            <li><font size="+1"><b>放射線技師　 　１名</b></font><span class="staff-number"></span></li>
-          </ul>
-          <h3><a href="staff.html"><br />
-          <font size="+1">スタッフ紹介ページはこちらから</font></a></h3>
-          
+      <!-- ▼ .section -->
+      <div class="section" id="info-box">
+        <h2 class="subtitle">まつもと整形外科クリニックからのお知らせ</h2>
+      
+        <!-- ▼ .osX -->
+        <div class="osX">
+      	  <!--  #recent-list -->
+          <div id="recent-list"></div>
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $('#recent-list').load('information/recent.html');
+            });
+          </script>
+          <!-- / #recent-list -->
         </div>
-			    </div>
-		      <!-- ▲ .section -->
-		      <script type="text/javascript">
+        <!-- ▲ .osX -->
+      </div>
+      <!-- ▲ .section -->
+
+      <!-- ▼ .section -->
+      <div class="section">
+        <h2 class="subtitle">院長紹介</h2>
+        <div class="sec-ct clearfix">
+          <p class="imgL txtC">
+            <img src="img/top/top_face.jpg" width="184" height="166" id="face" /><br />
+            <img src="img/top/top_faceFhoto-txtImg.gif" width="162" height="36" alt="院長：松本大成" />
+          </p>
+          <div class="sec-dec" align="left">
+            <dl class="clear">
+              <dt>資格</dt>
+              <dd class="m-L-i">
+                <ul class="normal-List">
+                  <li>日本<b><strong>整形外科</strong></b>学会専門医</li>
+                  <li>日本<b><strong>整形外科</strong></b>学会認定スポーツ医</li>
+                  <li>日本<b><strong>整形外科</strong></b>学会認定リウマチ医</li>
+                  <li>日本<b><strong>整形外科</strong></b>学会認定運動器リハビリテーション医</li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <!-- ▲ .section -->
+
+      <!-- ▼ .section -->
+      <div class="section">
+        <h2 class="subtitle">クリニック理念</h2>
+        <div id="phil-large">
+          <p>患者様＝大切な家族、友人の精神</p>
+        </div>
+        <div id="phil-normal">
+          〜この精神でスタッフ一同患者様と向き合います〜<br /><br />
+        </div>
+        <div id="phil-middle">
+          <p>積極的な予防医学、健康増進</p>
+        </div>
+        <div id="phil-normal">
+          ～充実した理学療法士やスポーツトレーナーによる運動指導～
+        </div>
+        <p class="up2"><br />
+        </p>
+      </div>
+      <!-- ▲ .section -->
+
+      <!-- ▼ .section -->
+      <div class="section">
+        <h2 class="subtitle">診療案内</h2>
+        <div class="exam-normal">診療時間のご案内</div>
+        <div class="sec-ct"><img src="img/examination/examination_timeTable.jpg"/></div>
+      </div>
+      <!-- ▲ .section -->
+						
+      <!-- ▼ .section -->
+      <div class="section">
+        <h2 class="subtitle">アクセス</h2>
+		<p>
+          まつもと整形外科クリニックは、旧３号線和白交差点からすぐの場所にございます。<br />
+          目印となる「亀の井ホテル」の隣にございます。<br />
+          無料駐車場を完備しておりますのでお車はもちろん、公共機関でも大変お越しいただきやすい場所です。
+        </p>
+        <div class="sec-ct">
+          <p class="mapImg"><img src="img/access/access_map.gif" width="422" height="367" /></p>
+          <div id="canvas"></div>
+        </div>
+<!--
+  <p class="content_left">
+    まつもと整形外科クリニックは、旧３号線和白交差点からすぐの場所にございます。<br />
+	目印となる「亀の井ホテル」の隣にございます。<br />
+	無料駐車場を完備しておりますのでお車はもちろん、公共機関でも大変お越しいただきやすい場所です。<br />
+  </p>
+  <div class="content_center">
+    <img src="img/access/access_map.gif" width="300" height="261" alt="アクセス" /><br /><br />
+  </div>
+  <div id="map_canvas" class="content_center"></div>
+  <br />
+-->
+      </div>
+      <!-- ▲ .section -->
+
+<script type="text/javascript">
 <!--
 swfobject.registerObject("FlashID");
 //-->
-			    </script>
-		</div>
-		<!-- ▲ #main -->
+</script>
+
+    </div>
+    <!-- ▲ #main -->
 		
-		<!-- ▼ #aside -->
-		<div id="aside">
-		<p><img src="img/common/QRcode.jpg" width="151" height="151" /></p>
-<p><img src="img/common/mobile-here-txtImg.gif" width="167" height="31" /></p>
-		<p class="up2 sideBanner"><a href="examination.html#main"><img src="img/common/saturday-banner.jpg" width="186" height="76" alt="土曜日 午後３時まで診療中" /></a></p>
-		<p class="up sideBanner"><a href="access.html#main"><img src="img/common/banner-parking.jpg" width="186" height="76" alt="患者様専用駐車場２０台完備" /></a></p>
-			<p class="up sideBanner"><a href="staff.html#main"><img src="img/staff/staff_bunner.jpg" width="186" height="76" alt="患者様専用駐車場２０台完備" /></a></p>
-      <br />
-      <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FMatsumotoZhengXingWaiKekurinikku&amp;width=186&amp;height=290&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=true&amp;appId=135025009970062" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:186px; height:290px;" allowTransparency="true"></iframe>
-		
-</div>
-		<!-- ▲ #aside -->
+    <!-- ▼ #aside -->
+    <div id="banner-right"></div>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $('#banner-right').load('banner.html');
+        });
+      </script>
+    <!-- ▲ #aside -->
 	
-	<!-- ▲ #contents -->
-	</div>
+    <!-- ▲ #contents -->
+    </div>
 
-		<!-- ▼ #footer -->
-		<div id="footer">
-		<div id="foot-logo"><a href="index.html"><img src="img/common/footer-logo.gif" alt="まつもと整形外科クリニック" width="286" height="69" /></a></div>
-<p>まつもと整形外科クリニック</p>
-		<address>〒811-0213 福岡市東区和白丘２丁目３－７</address>
-		<ul>
-			<li><strong>福岡市東区</strong></li>
-			<li><strong>和白</strong></li>
-			<li><strong>整形外科</strong></li>
-			<li><strong>一般整形外科</strong></li>
-			<li><strong>スポーツ整形外科</strong></li>
-			<li><strong>リウマチ科</strong></li>
-		</ul>
-		</div>
-		<!-- ▲ #footer -->
+    <!-- ▼ #footer -->
+    <div id="footer">
+      <div id="foot-logo"><a href="index.html"><img src="img/common/footer-logo.gif" alt="まつもと整形外科クリニック" width="286" height="69" /></a></div>
+      <p>まつもと整形外科クリニック</p>
+      <address>〒811-0213 福岡市東区和白丘２丁目３－７</address>
+      <ul>
+        <li><strong>福岡市東区</strong></li>
+        <li><strong>和白</strong></li>
+        <li><strong>整形外科</strong></li>
+        <li><strong>一般整形外科</strong></li>
+        <li><strong>スポーツ整形外科</strong></li>
+        <li><strong>リウマチ科</strong></li>
+      </ul>
+    </div>
+    <!-- ▲ #footer -->
 
-
-<!-- ▲ #page -->
-</div>
+  <!-- ▲ #page -->
+  </div>
 </body>
-
 </html>

@@ -282,8 +282,8 @@ h1 {
 	margin:20px 0 0 69px;
 }
 
-#hd-adress {
-	width: 225px;
+#hd-address {
+	width: 240px;
 	font-size:11px;
 	line-height:1.4;
 	position: absolute;
@@ -293,7 +293,7 @@ h1 {
 
 
 
-#hd-adress p {
+#hd-address p {
 	margin-bottom: 5px;
 }
 
