@@ -49,34 +49,33 @@
   })();
 </script>
 <script type="text/javascript"> 
-google.load('maps', '3.0', { other_params: 'sensor=false' });
-google.setOnLoadCallback(function() {
-$(function() {
-var latlng = new google.maps.LatLng(33.691022,130.431747); 
-var options = {
-  zoom: 15,
-  center: latlng,
-  mapTypeId: google.maps.MapTypeId.ROADMAP,
-  streetviewControl : true
-};
-var map = new google.maps.Map($('#canvas')[0], options);
-var marker = new google.maps.Marker({
-  position: latlng,
-  map: map, 
-  title: 'まつもと整形外科クリニック'
-});
-var content = '<a href="#">まつもと整形外科クリニック</a>' + 
-              '<br />福岡市東区和白丘２丁目３－７<br />092-605-6006';
-var infowindow = new google.maps.InfoWindow({
-  content: content ,
-  size: new google.maps.Size(50, 50)
-});
-google.maps.event.addListener(marker, 'click', function() {
-  infowindow.open(map, marker);
-});
-
-});
-});
+  google.load('maps', '3.0', { other_params: 'sensor=false' });
+  google.setOnLoadCallback(function() {
+    $(function() {
+      var latlng = new google.maps.LatLng(33.691022,130.431747); 
+      var options = {
+        zoom: 15,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        streetviewControl : true
+      };
+      var map = new google.maps.Map($('#canvas')[0], options);
+      var marker = new google.maps.Marker({
+        position: latlng,
+        map: map, 
+        title: 'まつもと整形外科クリニック'
+      });
+      var content = '<a href="#">まつもと整形外科クリニック</a>' + 
+                '<br />福岡市東区和白丘２丁目３－７<br />092-605-6006';
+      var infowindow = new google.maps.InfoWindow({
+        content: content ,
+        size: new google.maps.Size(50, 50)
+      });
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map, marker);
+      });
+    });
+  });
 </script> 
 </head>
 
@@ -184,7 +183,7 @@ google.maps.event.addListener(marker, 'click', function() {
           <div id="recent-list"></div>
           <script type="text/javascript">
             $(document).ready(function() {
-              $('#recent-list').load('information/recent.html');
+              $('#recent-list').load('common/info-recent.html');
             });
           </script>
           <!-- / #recent-list -->
@@ -258,18 +257,6 @@ google.maps.event.addListener(marker, 'click', function() {
           <p class="mapImg"><img src="img/access/access_map.gif" width="422" height="367" /></p>
           <div id="canvas"></div>
         </div>
-<!--
-  <p class="content_left">
-    まつもと整形外科クリニックは、旧３号線和白交差点からすぐの場所にございます。<br />
-	目印となる「亀の井ホテル」の隣にございます。<br />
-	無料駐車場を完備しておりますのでお車はもちろん、公共機関でも大変お越しいただきやすい場所です。<br />
-  </p>
-  <div class="content_center">
-    <img src="img/access/access_map.gif" width="300" height="261" alt="アクセス" /><br /><br />
-  </div>
-  <div id="map_canvas" class="content_center"></div>
-  <br />
--->
       </div>
       <!-- ▲ .section -->
 
@@ -286,7 +273,7 @@ swfobject.registerObject("FlashID");
     <div id="banner-right"></div>
       <script type="text/javascript">
         $(document).ready(function() {
-          $('#banner-right').load('banner.html');
+          $('#banner-right').load('common/banner-right.html');
         });
       </script>
     <!-- ▲ #aside -->
@@ -295,19 +282,12 @@ swfobject.registerObject("FlashID");
     </div>
 
     <!-- ▼ #footer -->
-    <div id="footer">
-      <div id="foot-logo"><a href="index.html"><img src="img/common/footer-logo.gif" alt="まつもと整形外科クリニック" width="286" height="69" /></a></div>
-      <p>まつもと整形外科クリニック</p>
-      <address>〒811-0213 福岡市東区和白丘２丁目３－７</address>
-      <ul>
-        <li><strong>福岡市東区</strong></li>
-        <li><strong>和白</strong></li>
-        <li><strong>整形外科</strong></li>
-        <li><strong>一般整形外科</strong></li>
-        <li><strong>スポーツ整形外科</strong></li>
-        <li><strong>リウマチ科</strong></li>
-      </ul>
-    </div>
+    <div id="footer"></div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#footer').load('common/footer.html');
+      });
+    </script>
     <!-- ▲ #footer -->
 
   <!-- ▲ #page -->
