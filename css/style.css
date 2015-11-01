@@ -430,10 +430,16 @@ h1 {
 /*
 ===== 0: common =====
 */
-.subtitle {
+.subtitle_top {
 	font-size: 140%;
 	font-weight: bold;
 	color: #999900;
+}
+
+.subtitle {
+	font-size: 140%;
+	font-weight: bold;
+	color: #fb7e04;
 }
 
 /*
