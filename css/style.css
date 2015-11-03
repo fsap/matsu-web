@@ -726,6 +726,18 @@ h1 {
 	margin-bottom:6px;
 }
 
+/*
+===== 10: staff.html=====
+*/
+#staff-list li {
+	padding: 20px 0 30px 0;
+	border-bottom: 1px dotted #dbdbdb;
+}
+#staff-list li:last-child {
+	padding: 20px 0 50px 0;
+	border-bottom: none;
+}
+
 
 /*
 * { outline: 2px dotted red }
