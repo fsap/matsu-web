@@ -738,6 +738,35 @@ h1 {
 	border-bottom: none;
 }
 
+/*
+===== 11: zassi.html=====
+*/
+#zassi {
+	width: 625px;
+	margin: 30px 50px 50px 0;
+	float: left;
+	display: inline;
+}
+#zassi dd {
+	padding-top: 20px;
+	padding-bottom: 0;
+	border-bottom: none;
+}
+#zassi dl {
+	padding-left: 20px;
+}
+#zassi .new-title {
+	color:#fb7e04;
+	font-size:140%;
+	font-weight:bold;
+	padding-bottom:10px;
+}
+#zassi .sub-title {
+	color:#fb7e04;
+	font-size:120%;
+	font-weight:bold;
+	text-decoration: underline;
+}
 
 /*
 * { outline: 2px dotted red }
