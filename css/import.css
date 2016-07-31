@@ -22,6 +22,7 @@ CSS information
 @import url("print.css");
 
 
-#S-D {
-	text-align: center;
-}
+/* Slick - スライドショーライブラリ
+----------------------------------------------------------- */
+@import url("slick/slick.css");
+@import url("slick/slick-theme.css");

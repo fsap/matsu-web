@@ -24,7 +24,31 @@ CSS information
 	基本設定、リンクカラーなど
 ----------------------------------------------------*/
 body,html {
-		height: 100%;/*高さを１００％に*/
+    height: 100%;   /*高さを１００％に*/
+}
+
+a:link {
+    color: #;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a.push:active {
+    position: relative;/*--ポチっとボタン風に--*/
+    top: 1px;/*--ポチっとボタン風に--*/
+}
+
+/*
+body,html {
+		height: 100%;
 }
 
 a:link {
@@ -42,14 +66,55 @@ a:hover {
 }
 
 a.push:active {
-        position: relative;/*--ポチっとボタン風に--*/
- 		top: 1px;/*--ポチっとボタン風に--*/
+        position: relative;
+ 		top: 1px;
 }
+*/
 
 
 /*----------------------------------------------------
 	共通ページ
 ----------------------------------------------------*/
+h2 {
+    border-bottom:#dbdbdb 1px solid;
+    padding-bottom:7px;
+    margin-bottom: 8px;
+}
+
+h2:first-child {
+
+}
+
+h3 {
+    color:#3498DB;
+}
+
+/* カスタムhr */
+hr.style-dotted-line {
+	display: block;
+	border: 0;
+	border-bottom: 1px dashed #ccc;
+	background: #999;
+}
+
+hr.style-simple {
+	display: block;
+	border: 0;
+	border-bottom: 1px solid #e4e3e4;
+	background: #ccc;
+}
+
+/* ボタン風リンク */
+a.button-rect {
+	background-color: #fff;
+	border: 1px solid #3498DB;
+	color:#3498DB;
+	padding: 1px 8px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/*
 #emboss { 
 
 }
@@ -67,10 +132,13 @@ h2:first-child {
 h3 {
 	 color:#fb7e04;
 }
+*/
+
 
 /*----------------------------------------------------
 	汎用 class
 ----------------------------------------------------*/
+/*
 .imgR {
 		float: right;
         display: inline;
@@ -83,13 +151,13 @@ h3 {
 		margin: 0px 15px 0 0;
 }
 
-.FL-box {/*FLOATしたボックスの回り込み解除(要)*/
+.FL-box {
 	_zoom: 1;
 	overflow:hidden;
 }
 
 .FL-box p,
-.FL-box div {/*FLOATしたボックスの回り込み解除(要)*/
+.FL-box div {
 	overflow:hidden;	
 	_zoom: 1;
 }
@@ -118,7 +186,7 @@ h3 {
 	list-style: disc inside;
 }
 
-.txtC {/*--センタリング--*/
+.txtC {
 		text-align: center;
 }
 
@@ -130,11 +198,11 @@ h3 {
 		margin-top: 2em;
 }
 
-.indent {/*--インデント--*/
+.indent {
 		text-indent: 1em;
 }
 
-.-indent {/*--逆インデント--*/
+.-indent {
 		text-indent: -1em;
 		padding-left: 1em;
 }
@@ -168,22 +236,23 @@ ins{
 }
 
 
-a:hover .opacity {/*--透過処理--*/
-    	filter:alpha(opacity=70);  /* IE7以下用 */
-    	-ms-filter: "alpha(opacity=70)"; /* IE8用 */
-    	-moz-opacity:0.7; /* Firefox 1.5未満, Netscape用 */
-    	-khtml-opacity: 0.7;  /* Safari 1.x, 他khtmlに対応したブラウザ用  */
-    	opacity: 0.7; /* Firefox 1.5以上, Opera, Safari用 */
+a:hover .opacity {
+    	filter:alpha(opacity=70);
+    	-ms-filter: "alpha(opacity=70)";
+    	-moz-opacity:0.7;
+    	-khtml-opacity: 0.7;
+    	opacity: 0.7;
     } 
 
-a.zoom:hover {/*--マウスオーバーをズームアイコン--*/
+a.zoom:hover {
 		cursor: url(zoomin.cur), pointer;
 }
 
 
-#hogehoge a:visited:after { /*訪問後のリンクにチェック*/ 
+#hogehoge a:visited:after {
     content:"　\2713"; 
 } 
+*/
 
 
 /*******************************************/
@@ -216,6 +285,7 @@ a.zoom:hover {/*--マウスオーバーをズームアイコン--*/
 /*----------------------------------------------------
 	#page
 ----------------------------------------------------*/
+/*
 body > #page {
 	height: auto;
 }
@@ -266,11 +336,64 @@ body > #page {
 	height: 100% ;
  	min-height: 100%;
 }
+*/
+
+/*----------------------------------------------------
+ ページ構成 基本クラス
+----------------------------------------------------*/
+
+.wrapper {
+    width: 970px;
+    margin: 0px auto;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.header {
+    width: 100%;
+}
+
+.page {
+    width: 100%;
+    margin: 10px auto 40px;
+    text-align: left;
+    height: 100% ;
+    min-height: 100%;
+    background-color: #fff;
+}
+
+.main {
+    display: block;
+    float: left;
+    width: 720px;
+/*    width: 100%;*/
+    background-color: #fff;
+}
+
+.sidemenu {
+    float: right;
+    width: 250px;
+    background-color: #fff;
+}
+
+.footer {
+    position: relative;
+    padding: 10px 0 15px 0;
+    width: 100%;
+    height: 120px;
+    clear: both;
+    font-size: 1.0rem;
+    line-height: 1.4;
+    background-color: #e1dfe0;
+    text-align:center;
+}
+
 
 /* -----------------------------------------------------------
 	#header
 		ヘッダー
 ----------------------------------------------------------- */
+/*
 #header {
 	position:relative;
 	zoom:1;
@@ -304,7 +427,7 @@ h1 {
 }
 
 #nav ul {
-        line-height: normal;/*--IE7対策--*/
+        line-height: normal;// --IE7対策--
 		zoom:1;
 		padding: 15px 0 15px 0;
 		width:900px;
@@ -322,26 +445,224 @@ h1 {
 }
 
 #nav ul li a:hover {
-	background-color: transparent;/*--IE6対策--*/
+	background-color: transparent;// --IE6対策--
 }
+*/
+
+/*----------------------------------------------------
+ ヘッダー
+----------------------------------------------------*/
+
+/* キーワード */
+.header .keywords {
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-bottom: #FB7E04 8px solid;
+}
+
+.header .keywords .word {
+    list-style: none;
+    display: inline;
+    margin: 0 3px 0 3px;
+}
+
+.header .keywords .word:after {
+	content: " |";
+}
+
+/* ロゴ */
+.header-main {
+    height: 100px;
+    background: #ffffff;
+    padding: 10px 15px;
+}
+
+.header-main .logo {
+    float:left;
+    width: 440px;
+    height: 84px;
+    background: url('../img/common/logo.jpg') no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.header-main .logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header-main .basic-info {
+    display: inline-block;
+    float:right;
+    width: 220px;
+}
+
+.header-main .address {
+    margin-bottom: 5px;
+    font-size:1.4rem;
+    line-height:1.4em;
+    text-align: left;
+}
+
+.header-main .tel {
+    font-size:1.0rem;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.header-main .telno {
+    padding: 8px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #fff;
+/*    background-color: #e67e22;*/
+    background-color: #FB7E04;
+}
+
+
+/* ナビゲーション */
+.global-nav {
+    background-color: #FB7E04;
+    text-align: center;
+}
+
+.global-nav .nav-item {
+    display: inline-block;
+    margin: 15px 0px 12px 20px;
+    width: 170px;
+    height: 35px;
+    font-size:1.5rem;
+    font-weight: bold;
+    line-height:2.2;
+    letter-spacing: 4px;
+    background: url('../img/common/menu-logo.png') no-repeat;
+}
+
+.global-nav .active {
+    background: url('../img/common/menu-logo_active.png') no-repeat;
+}
+
+.global-nav .nav-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.global-nav .nav-item a:visited {
+    color: #fff;
+}
+
+.global-nav .nav-item a:hover {
+    background: url('../img/common/menu-logo_active.png') no-repeat;
+}
+
+.slideshow {
+    margin: 0 auto;
+}
+
+.mainphoto {
+    margin: 0 auto 20px;
+}
+
+.change-fontsize {
+    width: 100%;
+    margin: 0 -25px;
+    text-align: right;
+}
+
+.change-fontsize .buttons {
+    list-style: none;
+    float: right;
+}
+
+.change-fontsize .description {
+    padding: 10px 10px;
+    text-align: right;
+    float: left;
+    font-size: 1.8rem;
+}
+
+.change-fontsize .button-list {
+    float: left;
+}
+
+.change-fontsize .button {
+    display: inline-block;
+    background-color: #3498db;
+}
+
+.change-fontsize .button a {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: bold;
+    color: #fff;
+}
+
 
 /*----------------------------------------------------
 	#contents
 ----------------------------------------------------*/
+/*
 #contents {
-		padding:0 10px 100px 60px;/*フッターの高さ150px*/
+		padding:0 10px 100px 60px;
 		margin-top: 18px;
 }
 
-#contents .pageTop {/*ページトップへ戻る（※前ページへ戻る）*/
+#contents .pageTop {
 	clear: both;
 	text-align: right;
 }
+*/
+
+/*----------------------------------------------------
+ ページコンテンツ
+----------------------------------------------------*/
+
+.main .subtitle {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #999900;
+}
+
+.main .section {
+    margin: 30px 25px 80px;
+}
+
+/* バナー */
+.sidemenu .banners .banner-list {
+    margin: 30px 25px 30px 0px;
+}
+
+.sidemenu .banners .banner-list .banner-item {
+    display: block;
+    padding: 6px 5px;
+    font-size: 1.3rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.sidemenu .banners .banner-list .banner-item .image {
+    border: 1px solid #ccc;
+}
+
 
 /*----------------------------------------------------
 	#main
 		メイン
 ----------------------------------------------------*/
+/*
 #main {
 		width: 625px;
 		margin-right: 50px;
@@ -352,12 +673,14 @@ h1 {
 		-ms-box-sizing: border-box;
 		box-sizing: border-box;
 }
+*/
 
 
 /* -----------------------------------------------------------
 	#aside
 		サイドバー、サブ
 ----------------------------------------------------------- */
+/*
 #aside {
         float: left;
         display: inline;
@@ -378,20 +701,22 @@ h1 {
 	zoom: 1;
 }
 * html .sideBanner a:hover img {
-	/* for BackCompat mode
+	// for BackCompat mode
 		margin-left: -6px;
 		margin-right: -6px;
-	over here */
+	over here //
 	position: relative;
 }
+*/
 
 /* -----------------------------------------------------------
 	#footer
 		フッター
 ----------------------------------------------------------- */
-#footer { /* フッター下部固定 */
+/*
+#footer { // フッター下部固定
 	position: relative;
-	margin-top: -100px; /* フッターの高さ */
+	margin-top: -100px; // フッターの高さ
 	padding-top:40px;
 	padding-bottom: 15px;
 	height: 150px;
@@ -414,7 +739,7 @@ h1 {
 }
 
 *:first-child+html ul {
-        line-height: normal;/*--IE7対策--*/
+        line-height: normal;// --IE7対策-- //
 }
 
 #footer ul li {
@@ -427,9 +752,64 @@ h1 {
 #footer ul li:first-child {
 	border-left: 1px solid #fb7e04;
 }
+*/
+
+/*----------------------------------------------------
+ フッター
+----------------------------------------------------*/
+
+/* ロゴ */
+.footer .footer-logo {
+    margin: 0 auto;
+    width: 300px;
+    height: 70px;
+    background: url('../img/common/footer-logo.png') no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.footer .footer-logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.footer .footer-info {
+    margin: 10px auto;
+    line-height: 1.8;
+}
+
+/* キーワード */
+.footer .keywords {
+    text-align: center;
+    margin: 10px auto;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+}
+
+.footer .keywords .word {
+    list-style: none;
+    display: inline;
+    margin: 0 3px 0 3px;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.footer .keywords .word:after {
+	content: " |";
+}
+
+
+/*----------------------------------------------------
+ コンテンツ
+----------------------------------------------------*/
+
 /*
 ===== 0: common =====
 */
+/*
 .subtitle_top {
 	font-size: 140%;
 	font-weight: bold;
@@ -441,10 +821,12 @@ h1 {
 	font-weight: bold;
 	color: #fb7e04;
 }
+*/
 
 /*
 ===== 1: index.html =====
 */
+/*
 #top #main {
 	padding-bottom:50px;
 }
@@ -524,7 +906,7 @@ h1 {
 #staff ul {
 	margin-top:-20px;
 	margin-left: 20px;
-	line-height:1.8;/*IE対策*/
+	line-height:1.8;// IE対策
 }
 
 #staff ul li {
@@ -538,10 +920,223 @@ h1 {
 	top:0;
 	left: 100px;
 }
+*/
+
+/*
+===== 1: index.html =====
+*/
+
+/* News */
+.news-list {
+    max-height: 200px;
+    overflow-y: auto;
+    list-style-type: none;
+}
+
+.news-list .news-item .news-date {
+    color: #8e8e1b;
+}
+
+.news-list .news-item a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 1.4rem;
+    color: #4d4d4d;
+}
+
+.news-list .news-item a:hover {
+    background-color: #fafafa;
+}
+
+/* Doctor */
+.doctor-info {
+    padding: 10px;
+}
+
+.doctor-info .doctor-photo {
+    position: relative;
+    display: block;
+    float: left;
+    width: 210px;
+    margin-bottom: 30px;
+    padding: 200px 15px 0;
+    /* 正方形の場合 padding: 230px 15px 0;*/
+}
+
+.doctor-info .doctor-photo .title {
+    margin-top: 30px;
+    text-align: center;
+    color: #145d8e;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.doctor-info .doctor-photo .image {
+	margin-left: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 230px;
+/*    border: 1px solid #ccc;
+    border-radius: 10px;*/
+}
+
+.doctor-career {
+    float: left;
+    margin-left: 40px;
+}
+
+.doctor-career .career-title {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    font-size: 1.6rem;
+    color: #FB7E04;
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.doctor-career .career-list {
+    margin-bottom: 20px;
+}
+
+.doctor-career .career-list .career-date {
+    margin-right: 7px;
+}
+
+.doctor-career .career-item {
+    display: block;
+    padding: 6px 5px;
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+/* Philosophy */
+.philosophy {
+}
+
+.philosophy .philosophy-title {
+    margin: 30px 0;
+    font-weight: bold;
+    font-size: 2.6rem;
+    text-align: center;
+    color: #e14d4c;
+}
+
+.philosophy .philosophy-caption {
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.philosophy .philosophy-description {
+    padding: 0 50px;
+    font-size: 2.0rem;
+    line-height: 2.0;
+    text-align: center;
+}
+
+/* Time table */
+.examination-schedule {
+}
+
+.timetable-description {
+    margin: 20px 0 5px 0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.timetable {
+    width: 650px;
+}
+
+.halftable {
+    width: 300px;
+}
+
+.timetable td {
+    border: 1px solid #999;
+}
+
+.timetable .col-item {
+    padding: 20px 5px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.timetable .col-title {
+    padding: 5px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #FB7E04;
+}
+
+.timetable .time {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #8e8e1b;
+}
+
+.timetable .caption {
+    background: #FDFDB3;
+}
+
+.timetable .active {
+    width: 60px;
+    font-size: 2.4rem;
+/*    color: #DB9634;*/
+    color: #FB7E04;
+}
+
+.timetable .inactive {
+    width: 60px;
+    font-size: 2.2rem;
+    color: #666;
+}
+
+.examination-schedule .notifications {
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+/* Access */
+.access {
+}
+
+.access .access-description {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.access .link-map {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background-color: #3498db;
+    border-radius: 5px;
+}
+
+.access .link-map a {
+    color: #fff;
+}
+
+.access .map-img {
+    margin: 36px 0;
+}
+
+
 /*
 ===== 2: recruit.html =====
 */
-
+/*
 #inner-caption {
 	font-size: 120%;
 	line-height: 2em;
@@ -601,22 +1196,187 @@ h1 {
 .even{
     background:#F8F8F8;
 }
-
-/*
-===== 3:     .html =====
 */
 
 
+/*
+===== 2: examination.html =====
+*/
+.subject-table {
+    width: 100%;
+}
+
+.subject-table td {
+    border-bottom: 1px solid #ccc;
+}
+
+.subject-table .col-title {
+    padding: 20px 0;
+    width: 30%;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.8;
+/*    color: #db9634;*/
+    color: #6fa51d;
+}
+
+.subject-table .col-item {
+    padding: 20px 0 20px 10px;
+    text-align: left;
+    font-size: 1.4rem;
+    vertical-align: middle;
+    line-height: 1.8;
+}
+
+.inspection-table {
+    width: 650px;
+}
+
+.inspection-table .col-photo {
+    padding: 20px 0;
+    width: 130px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.inspection-table .col-title {
+    padding: 5px 0 5px 10px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.4rem;
+    vertical-align: middle;
+/*    color: #db9634;*/
+    color: #6fa51d;
+}
+
+.inspection-table .col-item {
+    padding: 5px 0 5px 10px;
+    text-align: left;
+    font-size: 1.2rem;
+    vertical-align: middle;
+    line-height: 1.8;
+}
 
 
 /*
-===== 4: top.html=====
+===== 3: equipment.html =====
 */
+
+.equipment-table {
+    width: 750px;
+}
+
+.equipment-table td {
+    border-bottom: 1px solid #ccc;
+}
+
+.equipment-table .col-photo {
+    padding: 20px 0;
+    width: 240px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.equipment-table .col-title {
+    padding: 20px 0 5px 15px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    vertical-align: middle;
+/*    color: #db9634;*/
+    color: #6fa51d;
+    border-bottom: none;
+}
+
+.equipment-table .col-item {
+    padding: 10px 0 15px 15px;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+
+/*
+===== 4: access.html =====
+*/
+
+/* access -> see index.html */
+
+/* Address */
+.address .address-info {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.access-by .access-by-description {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+
+/*
+===== 5: link.html =====
+*/
+
+.link-box {
+    position: relative;
+    display: block;
+    float: left;
+    width: 260px;
+    height: 185px;
+    margin: 10px 13px 30px;
+    padding: 270px 10px 0;
+    box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.15s;
+}
+
+.link-box:hover {
+  opacity: 0.6;
+}
+/* 奇数・偶数
+.link-box:nth-of-type(odd) {
+  float: left;
+}
+
+.link-box:nth-of-type(even) {
+  float: right;
+}
+*/
+
+.link-box:nth-child(3n) {
+    float: right;
+}
+
+.link-box .title {
+    margin-top: 30px;
+/*    color: #db9634;*/
+    color: #6fa51d;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.link-box .description {
+  margin-top: 5px;
+  color: #333;
+  overflow: hidden;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.link-box .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 
 
 /*
 ===== 5: examination.html=====
 */
+/*
 #examination h2 {
 	margin-bottom:14px;
 }
@@ -629,18 +1389,23 @@ h1 {
 #examine .FL-box {
 	margin-bottom:15px;
 }
+*/
+
 /*
 ===== 6: equipment.html=====
 */
+/*
 #equip-List li {
 	padding: 20px 0 30px 0;
 	border-bottom: 1px dotted #dbdbdb;
 }
+*/
 
 
 /*
 ===== 7: access.html=====
 */
+/*
 #access .section,
 #examination .section
 {
@@ -662,10 +1427,13 @@ h1 {
 	width:432px;
 	height:360px;
 }
+*/
+
 
 /*
 ===== 8: link.html=====
 */
+/*
 #link h3 a {
 	color:#fb7e04;
 }
@@ -679,16 +1447,18 @@ h1 {
 	zoom: 1;
 }
 * html .link-thumb a:hover img {
-	/* for BackCompat mode
+	// for BackCompat mode
 		margin-left: -6px;
 		margin-right: -6px;
-	over here */
+	over here //
 	position: relative;
 }
+*/
 
 /*
 ===== 9: info.html=====
 */
+/*
 #info #main {
 	padding-bottom:60px;
 }
@@ -725,10 +1495,12 @@ h1 {
 #info dd p {
 	margin-bottom:6px;
 }
+*/
 
 /*
 ===== 10: staff.html=====
 */
+/*
 #staff-list li {
 	padding: 20px 0 30px 0;
 	border-bottom: 1px dotted #dbdbdb;
@@ -737,10 +1509,12 @@ h1 {
 	padding: 20px 0 50px 0;
 	border-bottom: none;
 }
+*/
 
 /*
 ===== 11: zassi.html=====
 */
+/*
 #zassi {
 	width: 625px;
 	margin: 30px 50px 50px 0;
@@ -767,6 +1541,7 @@ h1 {
 	font-weight:bold;
 	text-decoration: underline;
 }
+*/
 
 /*
 * { outline: 2px dotted red }
