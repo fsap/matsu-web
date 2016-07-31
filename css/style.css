@@ -1216,10 +1216,9 @@ h1 {
     text-align: center;
     vertical-align: middle;
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 1.8;
-/*    color: #db9634;*/
-    color: #6fa51d;
+    color: #db9634;
 }
 
 .subject-table .col-item {
@@ -1234,6 +1233,10 @@ h1 {
     width: 650px;
 }
 
+.inspection-table td {
+    border-bottom: 1px solid #ccc;
+}
+
 .inspection-table .col-photo {
     padding: 20px 0;
     width: 130px;
@@ -1242,20 +1245,20 @@ h1 {
 }
 
 .inspection-table .col-title {
-    padding: 5px 0 5px 10px;
+    padding: 20px 0 5px 15px;
     font-weight: bold;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    line-height: 1.6;
     vertical-align: middle;
-/*    color: #db9634;*/
-    color: #6fa51d;
+    color: #db9634;
+    border-bottom: none;
 }
 
 .inspection-table .col-item {
-    padding: 5px 0 5px 10px;
+    padding: 10px 0 15px 15px;
     text-align: left;
-    font-size: 1.2rem;
-    vertical-align: middle;
+    font-size: 1.4rem;
     line-height: 1.8;
 }
 
@@ -1265,7 +1268,7 @@ h1 {
 */
 
 .equipment-table {
-    width: 750px;
+    width: 700px;
 }
 
 .equipment-table td {
@@ -1274,7 +1277,7 @@ h1 {
 
 .equipment-table .col-photo {
     padding: 20px 0;
-    width: 240px;
+    width: 200px;
     text-align: center;
     vertical-align: middle;
 }
@@ -1286,8 +1289,7 @@ h1 {
     font-size: 1.8rem;
     line-height: 1.6;
     vertical-align: middle;
-/*    color: #db9634;*/
-    color: #6fa51d;
+    color: #db9634;
     border-bottom: none;
 }
 
@@ -1335,7 +1337,7 @@ h1 {
 .link-box:hover {
   opacity: 0.6;
 }
-/* 奇数・偶数
+/* 奇数・偶数 */
 .link-box:nth-of-type(odd) {
   float: left;
 }
@@ -1343,16 +1345,16 @@ h1 {
 .link-box:nth-of-type(even) {
   float: right;
 }
-*/
 
+/* 3の倍数
 .link-box:nth-child(3n) {
     float: right;
 }
+*/
 
 .link-box .title {
     margin-top: 30px;
-/*    color: #db9634;*/
-    color: #6fa51d;
+    color: #db9634;
     font-size: 1.6rem;
     line-height: 1.6;
 }
