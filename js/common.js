@@ -57,3 +57,23 @@ $(document).ready(function(){
         $('html').css('font-size', '80.0%');
     });
 });
+
+/*!
+ *
+ * Scroll
+ *
+ */
+$(document).ready(function() {
+  var pagetop = $('.back_to_top');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+       } else {
+            pagetop.fadeOut();
+            }
+       });
+       pagetop.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 500);
+              return false;
+   });
+});

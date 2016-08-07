@@ -632,6 +632,7 @@ h1 {
 
 .main .subtitle {
     font-size: 2.0rem;
+    line-height: 1.4;
     font-weight: bold;
     color: #999900;
 }
@@ -793,7 +794,7 @@ h1 {
     list-style: none;
     display: inline;
     margin: 0 3px 0 3px;
-    color: #3498db;
+    color: #FB7E04;
     font-weight: bold;
 }
 
@@ -1372,6 +1373,74 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+/*
+===== 6: staffs.html =====
+*/
+
+.staffs .division {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    font-size: 1.6rem;
+    color: #FB7E04;
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.staffs-table {
+    width: 700px;
+    margin: 0 0 40px 0;
+}
+
+.staffs-table td {
+    border-bottom: 1px solid #ccc;
+}
+
+.staffs-table .col-photo {
+    padding: 20px 0;
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.staffs-table .col-title {
+    padding: 20px 0 5px 15px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    vertical-align: middle;
+    color: #db9634;
+    border-bottom: none;
+}
+
+.staffs-table .col-item {
+    padding: 10px 0 15px 15px;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+
+.staffs-table .col-message {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #db9634;
+}
+
+
+/*
+===== 7: info.html=====
+*/
+
+.info-detail {
+}
+
+.info-detail .info-description {
+    margin: 10px 0 30px 0;
+    font-size: 1.5rem;
+    line-height: 1.6;
 }
 
 

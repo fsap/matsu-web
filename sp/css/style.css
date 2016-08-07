@@ -2,7 +2,7 @@
 
 
 /*---------- ページ全体の指定 ----------*/
-
+/*
 html, body, header, section, article, nav, footer,
 div, span, p, h1, h2, h3, h4,
 ul, ol, li, dl, dt, dd,
@@ -29,10 +29,72 @@ a:hover {
 a:visited {
   color: #005ebb;
 }
+*/
+
+/*----------------------------------------------------
+ 基本設定、リンクカラーなど
+----------------------------------------------------*/
+
+body {
+    font: helvetica, Verdana, arial,'ヒラギノ角ゴ pro W3', "Hiragino KaKu Gothic Pro", Osaka, sans-serif;
+    background-color: #ffffff;
+}
+
+a:link {
+    color: #;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+/*----------------------------------------------------
+ ページ構成 基本クラス
+----------------------------------------------------*/
+
+.header {
+    width: 100%;
+}
+
+.main {
+    padding: 10px;
+    text-align: left;
+    height: 100% ;
+    min-height: 100%;
+    background-color: #fff;
+}
+
+.footer {
+    position: relative;
+    padding: 10px 0 15px 0;
+    width: 100%;
+    height: 120px;
+    clear: both;
+    font-size: 1.0rem;
+    line-height: 1.4;
+    background-color: #e1dfe0;
+    text-align:center;
+}
+
 
 
 /*---------- ヘッダー ----------*/
-
+/*
 header {
   width: 100%;
 }
@@ -43,7 +105,6 @@ header h1 {
   color: #fff;
   background-color: #fb7e04;
   font-size: 12px;
-/*  font-size: 10px;*/
 }
 
 header h1 a {
@@ -97,10 +158,130 @@ header img.main_photo {
   margin: 0;
   padding: 0;
 }
+*/
+
+/*----------------------------------------------------
+ ヘッダー
+----------------------------------------------------*/
+
+/* キーワード */
+.header .keywords {
+    text-align: center;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+    padding: 2px;
+    border-bottom: #FB7E04 8px solid;
+}
+
+.header .keywords .word {
+    font-size: 0.8rem;
+    list-style: none;
+    display: inline;
+}
+
+.header .keywords .end {
+    font-size: 0.8rem;
+    list-style: none;
+    display: inline;
+}
+
+.header .keywords .word:after {
+	content: "|";
+}
+
+/* ロゴ */
+.header-main {
+    height: 55px;
+    background: #ffffff;
+    padding: 10px 5px 0px 5px;
+}
+
+.header-main .logo {
+    float:left;
+    width: 60%;
+    max-width: 240px;
+    height: 100%;
+    background: url('../img/common/logo.jpg') no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.header-main .logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header-main .basic-info {
+    float:right;
+}
+
+.header-main .announce {
+    max-width: 140px;
+    min-width: 120px;
+    padding: 4px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #FB7E04;
+}
+
+.header-main .address {
+    margin-bottom: 4px;
+    font-size:0.9rem;
+    line-height:1.4em;
+    text-align: left;
+}
+
+.header-main .telno {
+    padding: 4px 6px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: #fff;
+/*    background-color: #e67e22;*/
+    background-color: #FB7E04;
+}
+
+.header-main .telno a {
+    color: #fff;
+}
+
+/* スライドショー・メイン写真 */
+.slideshow {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.slideshow img {
+    width: 100%;
+}
+
+.slick-slider {
+    margin-bottom: 0px;
+}
+
+.mainphoto {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 30px;
+}
+
+.mainphoto img {
+    width: 100%;
+}
 
 
 /*---------- コンテンツ ----------*/
-
+/*
 #content {
   padding: 6px;
 }
@@ -117,7 +298,6 @@ section h2 {
   color: #999900;
   border-bottom: solid 1px;
   border-bottom-color: #cccccc;
-/*  background: url(img/h_bg.gif) center repeat-x; */
   background-color: #fff;
 }
 
@@ -256,14 +436,14 @@ section td.table_line {
   width: 320px;
   height: 288px;
 }
+*/
 
 /*---------- ナビ ----------*/
-
+/*
 nav {
   width: 100%;
   text-decoration: none;
-  margin: 0 0 10px 0;
-/*  background: url(img/nav_bg.gif) repeat-x; */
+  margin: 0 0 20px 0;
 }
 
 nav h2 {
@@ -272,7 +452,6 @@ nav h2 {
   color: #ffffff;
   border-bottom: solid 1px;
   border-bottom-color: #cccccc;
-/*  background: url(img/h_bg_gray.gif) center repeat-x; */
   background-color: #666;
 }
 
@@ -291,14 +470,11 @@ nav li {
 nav li a {
   padding: 10px 15px;
   display: block;
-/*  color: #005ebb !important; */
   color: #fff !important;
   font-weight: bold;
   text-decoration: none;
   border-bottom: solid 2px;
   border-bottom-color: #cccccc;
-/*  background: url(img/nav_bg.gif) repeat-x; */
-/*  background-color: #faa24b; */
   background-color: #fa9632;
 }
 
@@ -309,24 +485,147 @@ nav li a:hover {
   text-decoration: none;
   border-bottom: solid 2px;
   border-bottom-color: #cccccc;
-/*  background: url(img/nav_bg_hover.gif) repeat-x; */
 }
 
 nav dd {
   margin: 4px 0 8px 0;
 }
+*/
+
+.global-nav {
+    width: 100%;
+    text-decoration: none;
+    margin: -30px 0 0px 0;
+    background-color: #FB7E04;
+}
+
+.global-nav ul {
+  width: 100%;
+  border-top: solid 1px;
+  border-top-color: #cccccc;
+}
+
+.global-nav li {
+    width: 100%;
+    border-bottom: solid 2px;
+    border-bottom-color: #cccccc;
+}
+
+.global-nav .nav-item {
+    list-style: none;
+    text-align: left;
+}
+
+.global-nav .nav-item a {
+    margin: 12px;
+    padding: 4px 30px;
+    display: block;
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background: url('../img/sp/menu-logo.png') no-repeat;
+}
+
+.global-nav .active a {
+    background: url('../img/sp/menu-logo_active.png') no-repeat;
+}
+
+.global-nav .nav-item a:hover {
+  color: #fff !important;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.global-nav .nav-item a:hover {
+  color: #fff !important;
+}
+
+.banner {
+    margin: 30px 0 0 0;
+    text-align: center;
+}
+
+.banner dd {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.row-link ul {
+  width: 100%;
+  border-top: solid 1px;
+  border-top-color: #cccccc;
+}
+
+.row-link li {
+    width: 100%;
+    padding: 18px 15px;
+    list-style: none;
+    text-align: left;
+    font-size: 1.4rem;
+    display: block;
+    border-bottom: solid 2px;
+    border-bottom-color: #cccccc;
+    background-color: #fa9632;
+}
+
+.row-link a {
+  color: #fff !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 
 /*---------- トップに戻る ----------*/
-
+/*
 #page_back {
   margin: 0 0 8px 0;
   padding: 0 6px 0 0;
   text-align: right;
 }
+*/
+
+.back_to_top {
+    margin: 15px 5px;
+    text-align: right;
+}
+
+.back_to_top a {
+    display: inline-block;
+    padding: 2px 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background-color: #FB7E04;
+    border-radius: 5px;
+}
+
+
+/*----------------------------------------------------
+ コンテンツ
+----------------------------------------------------*/
+
+.main .subtitle {
+    padding: 5px 0 8px 0px;
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #8e5605;
+    border-bottom: solid 1px;
+    border-bottom-color: #cccccc;
+}
+
+.main .section {
+    margin: 20px 8px 50px;
+}
 
 
 /*---------- フッター ----------*/
 
+/*
 footer {
   width: 100%;
   padding: 5px 0 5px 0;
@@ -334,7 +633,6 @@ footer {
   text-align: center;
   border-top: solid 1px;
   border-top-color: #cccccc;
-/*  background-color: #eeeeee; */
   background-color: #e1dfe0;
 }
 
@@ -382,5 +680,569 @@ footer p.copy a:visited {
 
 footer address {
   font-size: 9px;
+}
+*/
+
+/*----------------------------------------------------
+ フッター
+----------------------------------------------------*/
+
+/* ロゴ */
+.footer .footer-logo {
+    margin: 0 auto;
+    width: 300px;
+    height: 70px;
+    background: url('../img/common/footer-logo.png') no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.footer .footer-logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.footer .footer-info {
+    margin: 10px auto;
+}
+
+/* キーワード */
+.footer .keywords {
+    text-align: center;
+    margin: 10px auto;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+}
+
+.footer .keywords .word {
+    list-style: none;
+    display: inline;
+    color: #FB7E04;
+	font-weight: bold;
+}
+
+.footer .keywords .end {
+    list-style: none;
+    display: inline;
+    color: #FB7E04;
+	font-weight: bold;
+}
+
+.footer .keywords .word:after {
+	content: " |";
+}
+
+
+/*----------------------------------------------------
+ コンテンツ
+----------------------------------------------------*/
+/*
+===== 1: index.html =====
+*/
+
+/* News */
+.news-list {
+    margin-top: 10px;
+    padding: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+    list-style-type: none;
+    background-color: #fdfaf6;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.news-list .news-item {
+    margin-bottom: 7px;
+}
+
+.news-list .news-item .news-date {
+    color: #8e8e1b;
+}
+
+.news-list .news-item a {
+    display: block;
+/*    padding: 6px 5px 10px 0;*/
+    font-size: 1.5rem;
+	line-height: 2.4rem;
+    color: #4d4d4d;
+}
+
+.news-list .news-item a:hover {
+    background-color: #fafafa;
+}
+
+/* Doctor */
+.doctor-info {
+    padding: 10px 5px 0 0;
+}
+
+.doctor-info .doctor-photo {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.doctor-info .doctor-photo .title {
+    margin-top: 10px;
+    text-align: center;
+    color: #145d8e;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.doctor-info .doctor-photo .image {
+    width: 250px;
+/*    border: 1px solid #ccc;
+    border-radius: 10px;*/
+}
+
+.doctor-career {
+    margin-left: 15px;
+}
+
+.doctor-career .career-title {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    font-size: 1.4rem;
+    color: #FB7E04;
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.doctor-career .career-list {
+    margin-bottom: 30px;
+    padding: 0 5px;
+}
+
+.doctor-career .career-list .career-date {
+    margin-right: 1em;
+}
+
+.doctor-career .career-item {
+    display: block;
+/*    padding-left: 5.3em;*/
+/*    text-indent: -5.3em;*/
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+/* Philosophy */
+.philosophy {
+}
+
+.philosophy .philosophy-contents {
+    margin-top: 10px;
+    padding: 20px 10px;
+    background-color: #fdfaf6;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.philosophy .philosophy-title {
+    margin: 0px 0px 20px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #e14d4c;
+}
+
+.philosophy .philosophy-caption {
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.philosophy .philosophy-description {
+    padding: 0 20px;
+    font-size: 1.6rem;
+    line-height: 2.0;
+    text-align: center;
+}
+
+/* Time table */
+.examination-schedule {
+}
+
+.timetable {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.timetable td {
+    border: 1px solid #999;
+}
+
+.timetable .col-item {
+    padding: 15px 5px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.timetable .col-title {
+    padding: 5px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #FB7E04;
+}
+
+.timetable .time {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #8e8e1b;
+}
+
+.timetable .caption {
+    background: #FDFDB3;
+}
+
+.timetable .active {
+    width: 60px;
+    font-size: 2.2rem;
+    color: #FB7E04;
+}
+
+.timetable .inactive {
+    width: 60px;
+    font-size: 2.2rem;
+    color: #666;
+}
+
+.examination-schedule .notifications {
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+/* Access */
+.access {
+}
+
+.access .access-description {
+    margin: 20px 0;
+    font-size: 1.4rem;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.access .googlemap {
+    width: 100%;
+    margin: 20px 0 10px 0;
+}
+
+.access .map-img {
+    text-align: center;
+}
+
+.access .link-map {
+    text-align: left;
+}
+
+.access .link-map a {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background-color: #3498db;
+    border-radius: 5px;
+}
+
+.access .link-map a {
+	color: #fff;
+}
+
+
+/*
+===== 2: examination.html =====
+*/
+
+.subjects {
+}
+
+.subjects .subject-title {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    font-size: 1.4rem;
+    color: #db9634;
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.subjects .subject-list {
+    margin-bottom: 20px;
+    padding: 0 5px;
+}
+
+.subjects .subject-item {
+    display: block;
+    font-size: 1.3rem;
+    line-height: 1.68em;
+}
+
+.inspection-table {
+    width: 100%;
+}
+
+.inspection-table td {
+    border-bottom: 1px solid #ccc;
+}
+
+.inspection-table .col-photo {
+    padding: 20px 0;
+    width: 40%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.inspection-table .col-title {
+    padding: 20px 0 5px 15px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    vertical-align: middle;
+    color: #db9634;
+    border-bottom: none;
+}
+
+.inspection-table .col-item {
+    padding: 10px 0 15px 15px;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+
+/*
+===== 3: equipment.html =====
+*/
+
+.equipment-table {
+    width: 100%;
+}
+
+.equipment-table td {
+    border-bottom: 1px solid #ccc;
+}
+
+.equipment-table .end {
+    border-bottom: none;
+}
+
+.equipment-table .col-photo {
+    padding: 20px 0;
+    width: 30%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.equipment-table .col-title {
+    padding: 20px 0 5px 15px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    vertical-align: middle;
+    color: #db9634;
+    border-bottom: none;
+}
+
+.equipment-table .col-item {
+    padding: 10px 0 15px 15px;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+
+/*
+===== 4: access.html =====
+*/
+
+/* access -> see index.html */
+
+/* Address */
+.address .address-info {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.access-by .access-by-description {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+
+/*
+===== 5: link.html =====
+*/
+
+.link-box {
+    position: relative;
+    display: block;
+    float: left;
+    width: 140px;
+    height: 175px;
+    margin: 10px 0px 30px;
+    padding: 145px 10px 0;
+    box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.15s;
+}
+
+.link-box:hover {
+    opacity: 0.6;
+}
+.link-box:nth-of-type(odd) {
+    float: left;
+}
+
+.link-box:nth-of-type(even) {
+    float: right;
+}
+
+.link-box .title {
+    margin-top: 30px;
+    color: #db9634;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.link-box .description {
+    margin-top: 5px;
+    color: #333;
+    overflow: hidden;
+    font-size: 1.0rem;
+    line-height: 1.6;
+}
+
+.link-box .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*
+===== 6: staff.html =====
+*/
+
+.staffs .division {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    font-size: 1.4rem;
+    color: #FB7E04;
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.staffs-table {
+    width: 100%;
+    margin: 0 0 40px 0;
+}
+
+.staffs-table td {
+    border-bottom: 1px solid #ccc;
+}
+
+.staffs-table .col-photo {
+    padding: 20px 0;
+    width: 30%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.staffs-table .col-title {
+    padding: 20px 0 5px 15px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    vertical-align: middle;
+    color: #db9634;
+    border-bottom: none;
+}
+
+.staffs-table .col-item {
+    padding: 10px 0 15px 15px;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.staffs-table .col-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #db9634;
+}
+
+/*
+===== 7: info.html=====
+*/
+
+.info-detail {
+}
+
+.info-detail .info-description {
+    margin: 10px 0 30px 0;
+    font-size: 1.4rem;
+    text-align: left;
+    line-height: 1.6;
+}
+
+
+/*---------- 募集要項 ----------*/
+.txtC {
+  padding: 0 0 12px 12px;;
+  line-height: 1.8;
+}
+
+.rec-t {
+    margin: 26px 5px 40px 5px;
+	line-height: 1.6em;
+	border: 2px #e4e3e4 solid;
+}
+
+.rec-t caption {
+	font-size:15px;
+	margin-bottom:8px;
+}
+
+.rec-t tr {
+	border: 2px #e4e3e4 solid;
+}
+
+.rec-t th {
+	width: 25%;
+    color:white;
+	text-align:center;
+	font-weight: bold;
+/*	background: #3498DB; */
+	background: #56BBFF;
+}
+
+.rec-t th,
+.rec-t td{
+    padding:7px;
+    font-size:11px;
+}
+
+.rec-t td {
+	width: 75%;
+	padding-left: 10px;
+	line-height: 1.8em;
 }
 
