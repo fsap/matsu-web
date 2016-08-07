@@ -561,7 +561,7 @@ nav dd {
 
 .row-link li {
     width: 100%;
-    padding: 18px 15px;
+    padding: 18px 5px 18px 0;
     list-style: none;
     text-align: left;
     font-size: 1.4rem;
@@ -848,7 +848,7 @@ footer address {
 .philosophy .philosophy-title {
     margin: 0px 0px 20px;
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-align: center;
     color: #e14d4c;
 }
