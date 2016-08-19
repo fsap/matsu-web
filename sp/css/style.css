@@ -548,6 +548,10 @@ nav dd {
     text-align: center;
 }
 
+.banner .banner-item {
+    border: 1px solid #ccc;
+}
+
 .banner dd {
     margin: 15px 0;
     text-align: center;
