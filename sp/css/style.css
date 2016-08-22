@@ -1203,7 +1203,7 @@ footer address {
 */
 
 .staffs-table-s .col-title {
-    padding: 20px 0 5px 15px;
+    padding: 10px 0 10px 15px;
     font-weight: bold;
     text-align: left;
     font-size: 1.4rem;
@@ -1214,8 +1214,9 @@ footer address {
 }
 
 .staffs-table-s .col-item {
-    padding: 10px 0 15px 15px;
+    padding: 10px 0 10px 15px;
     text-align: left;
+    vertical-align: middle;
     font-size: 1.2rem;
     line-height: 1.4;
 }
