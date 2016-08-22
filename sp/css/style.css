@@ -1193,6 +1193,34 @@ footer address {
     color: #db9634;
 }
 
+.staffs-table-s {
+    width: 100%;
+}
+/*
+.staffs-table-s td {
+    border-bottom: 1px solid #ccc;
+}
+*/
+
+.staffs-table-s .col-title {
+    padding: 20px 0 5px 15px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    vertical-align: middle;
+    color: #db9634;
+    border-bottom: none;
+}
+
+.staffs-table-s .col-item {
+    padding: 10px 0 15px 15px;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+
 /*
 ===== 7: info.html=====
 */
