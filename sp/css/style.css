@@ -198,7 +198,7 @@ header img.main_photo {
 
 .header-main .logo {
     float:left;
-    width: 60%;
+    width: 55%;
     max-width: 240px;
     height: 100%;
     background: url('../img/common/logo.jpg') no-repeat;
