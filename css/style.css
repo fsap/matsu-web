@@ -938,10 +938,13 @@ h1 {
     color: #8e8e1b;
 }
 
-.news-list .news-item a {
+.news-list .news-item, .news-list .news-item a {
     display: block;
-    padding: 10px 15px;
+    padding: 4px 15px;
     font-size: 1.4rem;
+    margin-left: 4rem;
+    text-indent: -9.5rem;
+    line-height: 1.6rem;
     color: #4d4d4d;
 }
 
