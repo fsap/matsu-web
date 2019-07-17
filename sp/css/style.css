@@ -779,6 +779,19 @@ footer address {
     background-color: #fafafa;
 }
 
+/* Relocate */
+.relocate-photo .image {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.relocate-description {
+    padding: 0 20px;
+    font-size: 1.6rem;
+    line-height: 2.0;
+    text-align: center;
+}
+
 /* Doctor */
 .doctor-info {
     padding: 10px 5px 0 0;

@@ -952,6 +952,20 @@ h1 {
     background-color: #fafafa;
 }
 
+/* Relocate */
+.relocate-photo .image {
+    width: 680px;
+    padding: 10px 0;
+}
+
+.relocate-description {
+    padding: 0 50px;
+    font-size: 2.0rem;
+    line-height: 2.0;
+    text-align: center;
+}
+
+
 /* Doctor */
 .doctor-info {
     padding: 10px;
