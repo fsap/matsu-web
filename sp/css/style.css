@@ -1292,3 +1292,166 @@ footer address {
 	line-height: 1.8em;
 }
 
+===== 8: daycare.html=====
+*/
+
+.daycare {
+}
+
+.daycare .daycare-description {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.daycare .daycare-caption {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px 0px;
+    font-size: 1.6rem;
+    color: #FB7E04;
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.daycare-photo .image {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.daycare .daycare-info {
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+
+.daycare .daycare-item {
+    padding: 15px;
+    border-radius: 10px;
+    background: #FB7E04;
+    color: #fff;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.daycare .daycare-arrow {
+    margin: 20px 40px;
+    color: #FB7E04;
+    font-size: 3.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.daycare .daycare-item-description {
+    margin: 5px 0;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+
+/* Service table */
+.service {
+    width: 100%;
+}
+
+.service-description {
+    margin: 20px 0 5px 0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.service td {
+    border: 1px solid #999;
+}
+
+.service .col-item {
+    padding: 20px 5px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+/*    text-align: center; */
+    vertical-align: middle;
+}
+
+.service .col-title {
+    width: 20%;
+    padding: 5px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #FB7E04;
+}
+
+/* Price table */
+.pricetable {
+    width: 100%;
+}
+
+.pricetable .col-title {
+    padding: 5px;
+    font-weight: bold;
+    color: #8e8e1b;
+    background-color: #FDFDB3;
+}
+
+.pricetable .row-title {
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #fff;
+    background-color: #FB7E04;
+    vertical-align: middle;
+}
+
+.pricetable td {
+    border: 1px solid #999;
+}
+
+.pricetable .col-item {
+    padding: 20px 5px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+/*    text-align: center; */
+    vertical-align: middle;
+}
+
+/* Point table */
+.pointtable {
+    width: 100%;
+}
+
+.pointtable .col-title {
+    padding: 5px;
+    font-weight: bold;
+    color: #8e8e1b;
+    background-color: #FDFDB3;
+    width: 25%;
+}
+
+.pointtable .row-title {
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #fff;
+    background-color: #FB7E04;
+    vertical-align: middle;
+}
+
+.pointtable td {
+    border: 1px solid #999;
+}
+
+.pointtable .col-item {
+    padding: 20px 5px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+/*    text-align: center; */
+}
+
+.pointtable .col-unit {
+    width: 15%;
+}
+
+.pointtable .col-order {
+    width: 25%;
+}
+
