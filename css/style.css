@@ -1318,6 +1318,36 @@ h1 {
     line-height: 1.8;
 }
 
+.equipments .equip-title {
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 2.0rem;
+/*    text-align: center;*/
+    color: #e14d4c;
+}
+
+.equipments .equip-caption {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 1.8rem;
+/*    text-align: center;*/
+}
+
+.equipments .equip-description {
+    padding: 0 0 10px 0;
+    font-size: 1.4rem;
+    line-height: 1.6;
+/*    text-align: center;*/
+}
+
+.equipments .equip-img {
+    margin: 25px 0;
+    width: 800px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
 /*
 ===== 4: access.html =====
 */
