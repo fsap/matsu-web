@@ -782,7 +782,12 @@ footer address {
 /* Relocate */
 .relocate-photo .image {
     width: 100%;
-    padding: 10px 0;
+    padding: 8px 0;
+}
+
+.relocate-photo .caption {
+    font-size: 1.4rem;
+    padding: 0 0 20px 0;
 }
 
 .relocate-description {

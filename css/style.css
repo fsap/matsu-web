@@ -955,7 +955,11 @@ h1 {
 /* Relocate */
 .relocate-photo .image {
     width: 680px;
-    padding: 10px 0;
+    padding: 8px 0;
+}
+.relocate-photo .caption {
+    font-size: 1.6rem;
+    padding: 0 0 20px 0;
 }
 
 .relocate-description {
