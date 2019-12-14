@@ -185,7 +185,8 @@ body {
     font-size: 1.2rem;
     background: #F4F4F4;
     color: #4d4d4d;
-    font-family: "ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO", "メイリオ","Meiryo", sans-serif;
+  /*  font-family: "ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO", "メイリオ","Meiryo", sans-serif;*/
+    font-family: "ヒラギノ明朝 ProN W6","HiraMinProN-W6","MS 明朝","MS Mincho","ＭＳ Ｐ明朝","MS PMincho", sans-serif;
 }
 
 ins {
